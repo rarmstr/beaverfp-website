@@ -1,0 +1,198 @@
+TERMS OF SERVICE
+
+Last Updated: October 27, 2025
+
+IMPORTANT: Please read these Terms of Service carefully before using Beaver FP. By downloading, installing, or using the app, you agree to be bound by these terms.
+
+1. ACCEPTANCE OF TERMS
+
+These Terms of Service ("Terms") constitute a legally binding agreement between you and Rob Armstrong ("we," "us," or "our") regarding your use of the Beaver FP mobile application ("App"). By accessing or using the App, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy.
+
+If you do not agree to these Terms, do not download, install, or use the App.
+
+2. LICENSE GRANT
+
+Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to download, install, and use the App on your personal devices solely for your personal, non-commercial use.
+
+License Restrictions
+
+You may not:
+- Copy, modify, or create derivative works of the App
+- Reverse engineer, decompile, or disassemble the App
+- Rent, lease, loan, sell, sublicense, or distribute the App
+- Remove, alter, or obscure any proprietary notices on the App
+- Use the App for any commercial purpose without our written consent
+- Use the App in any way that violates applicable laws or regulations
+
+3. FINANCIAL PLANNING TOOL - NOT PROFESSIONAL ADVICE
+
+IMPORTANT DISCLAIMER: Beaver FP is a financial planning tool designed to help you model and visualize potential financial scenarios. It is NOT a substitute for professional financial advice.
+
+Nature of Service:
+
+- Planning Tool Only: The App provides calculations and projections based on the information you input. It does not provide personalized financial advice, recommendations, or investment guidance.
+- Educational Purpose: The App is designed for educational and planning purposes to help you understand potential financial outcomes.
+- No Professional Relationship: Using the App does not create a financial advisor-client, accountant-client, or any other professional relationship.
+- Consult Professionals: Before making any significant financial decisions, you should consult with qualified financial advisors, accountants, tax professionals, and legal counsel.
+
+Limitations of Projections:
+
+- Financial projections are based on assumptions and estimates that may not reflect actual future results
+- Past performance does not guarantee future results
+- Tax laws, investment returns, and economic conditions are subject to change
+- The App cannot account for all individual circumstances or future events
+
+4. DATA STORAGE AND PRIVACY
+
+All data you enter into Beaver FP is stored exclusively on your device using Apple's local storage systems:
+
+- Local Storage Only: Your financial data never leaves your device and is not transmitted to any servers.
+- No Cloud Storage: We do not maintain servers or cloud databases. We cannot access, view, or recover your data.
+- Your Responsibility: You are solely responsible for backing up your device and data. We recommend using iCloud or iTunes backups.
+- Data Loss: If you delete the App or lose your device without backing up, your data cannot be recovered by us.
+
+For complete details, please see our Privacy Policy at https://beaverfp.com/privacy
+
+5. USER RESPONSIBILITIES
+
+When using Beaver FP, you agree to:
+
+- Accurate Information: Enter accurate and truthful financial information
+- Device Security: Maintain the security of your device, including using strong passwords and biometric authentication
+- Regular Backups: Back up your device regularly to prevent data loss
+- Compliance: Use the App in compliance with all applicable laws and regulations
+- Updates: Keep the App updated to the latest version for security and functionality
+
+6. SUBSCRIPTION AND PAYMENT TERMS
+
+Beaver FP offers subscription-based access through Apple's In-App Purchase system:
+
+Subscription Plans:
+
+- Monthly Subscription: Billed monthly with a 14-day free trial for new users
+- Annual Subscription: Billed annually at a discounted rate
+- Lifetime Purchase: One-time payment for perpetual access
+
+Payment Processing:
+
+- All payments are processed by Apple through the App Store
+- We do not have access to your payment information
+- Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period
+- Your Apple ID account will be charged upon confirmation of purchase
+
+Free Trial:
+
+- New users may be eligible for a 14-day free trial
+- You can cancel anytime during the trial period without charge
+- If you don't cancel before the trial ends, you'll be charged for the subscription
+
+Cancellation and Refunds:
+
+- You can cancel your subscription at any time through your Apple ID account settings
+- Cancellation takes effect at the end of your current billing period
+- Refunds are handled by Apple according to their policies
+- Contact Apple Support for refund requests
+- We do not provide refunds for unused portions of subscription periods
+
+7. INTELLECTUAL PROPERTY
+
+The App, including all content, features, functionality, software, code, designs, and trademarks, is owned by Rob Armstrong and is protected by copyright, trademark, and other intellectual property laws.
+
+The "Beaver FP" name and logo are trademarks of Rob Armstrong. You may not use these marks without our prior written permission.
+
+8. WARRANTY DISCLAIMERS
+
+THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.
+
+We disclaim all warranties, including but not limited to:
+
+- Warranties of merchantability, fitness for a particular purpose, and non-infringement
+- Warranties that the App will be error-free, secure, or uninterrupted
+- Warranties regarding the accuracy, reliability, or completeness of any financial calculations or projections
+- Warranties that the App will meet your specific requirements or expectations
+
+Some jurisdictions do not allow the exclusion of implied warranties, so some of these exclusions may not apply to you.
+
+9. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR USE, ARISING OUT OF OR RELATED TO YOUR USE OF THE APP.
+
+This includes, but is not limited to, damages resulting from:
+
+- Financial losses based on projections or calculations from the App
+- Investment decisions made using the App
+- Data loss or corruption
+- Device damage or security breaches
+- Inability to access or use the App
+- Errors, omissions, or inaccuracies in the App
+
+In no event shall our total liability to you exceed the amount you paid for the App in the 12 months preceding the claim.
+
+10. INDEMNIFICATION
+
+You agree to indemnify, defend, and hold harmless Rob Armstrong from any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising from:
+
+- Your use of the App
+- Your violation of these Terms
+- Your violation of any rights of another party
+- Financial decisions made based on information from the App
+
+11. CHANGES TO THE APP
+
+We reserve the right to:
+
+- Modify, update, or discontinue the App or any features at any time without notice
+- Change subscription pricing with advance notice to existing subscribers
+- Impose limits on certain features or restrict access to parts of the App
+
+We are not liable to you or any third party for any modification, price change, suspension, or discontinuance of the App.
+
+12. CHANGES TO TERMS
+
+We may modify these Terms at any time. When we do, we will:
+
+- Post the updated Terms on our website at https://beaverfp.com/terms
+- Update the "Last Updated" date
+- Provide notice within the App if changes are material
+
+Your continued use of the App after changes constitutes acceptance of the updated Terms. If you do not agree to the changes, you must stop using the App.
+
+13. TERMINATION
+
+We may terminate or suspend your access to the App immediately, without prior notice, if you breach these Terms.
+
+You may terminate your use of the App at any time by deleting it from your device and canceling any active subscriptions.
+
+Upon termination:
+
+- Your license to use the App ends immediately
+- You must cease all use of the App
+- All provisions that should survive termination remain in effect (including disclaimers, limitations of liability, and indemnification)
+
+14. GOVERNING LAW AND DISPUTE RESOLUTION
+
+These Terms are governed by the laws of the Province of Ontario, Canada, without regard to conflict of law principles.
+
+Any disputes arising from these Terms or your use of the App shall be resolved through:
+
+1. Informal Resolution: Contact us at support@beaverfp.com to attempt to resolve the dispute informally
+2. Binding Arbitration: If informal resolution fails, disputes shall be resolved through binding arbitration in accordance with the laws of Ontario
+
+You agree to waive any right to a jury trial or to participate in a class action lawsuit.
+
+15. SEVERABILITY
+
+If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that the Terms otherwise remain in full force and effect.
+
+16. ENTIRE AGREEMENT
+
+These Terms, together with our Privacy Policy, constitute the entire agreement between you and Rob Armstrong regarding the App and supersede all prior agreements and understandings.
+
+17. CONTACT INFORMATION
+
+If you have any questions about these Terms of Service, please contact us:
+
+Email: support@beaverfp.com
+Developer: Rob Armstrong
+
+Thank you for using Beaver FP! We're committed to providing you with a powerful, private, and user-friendly financial planning tool. If you have any questions or feedback, please don't hesitate to reach out.
