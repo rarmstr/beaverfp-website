@@ -45,4 +45,45 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Image Modal functionality
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
+  const closeBtn = document.querySelector('.modal-close');
+
+  // Add click event to all screenshot images
+  const screenshotImages = document.querySelectorAll('.screenshot-item img');
+
+  screenshotImages.forEach(img => {
+    img.addEventListener('click', function() {
+      modal.classList.add('show');
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    });
+  });
+
+  // Close modal when clicking the close button
+  closeBtn.addEventListener('click', function() {
+    closeModal();
+  });
+
+  // Close modal when clicking outside the image
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close modal when pressing ESC key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('show')) {
+      closeModal();
+    }
+  });
+
+  function closeModal() {
+    modal.classList.remove('show');
+    document.body.style.overflow = ''; // Re-enable scrolling
+  }
 });
