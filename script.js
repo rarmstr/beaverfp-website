@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const closeBtn = document.querySelector('.modal-close');
 
   // Add click event to all screenshot images
-  const screenshotImages = document.querySelectorAll('.screenshot-item img');
+  const screenshotImages = document.querySelectorAll('.shot img');
 
   screenshotImages.forEach(img => {
     img.addEventListener('click', function() {

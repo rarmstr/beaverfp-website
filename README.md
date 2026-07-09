@@ -17,7 +17,12 @@ beaverfp-website/
 ├── privacy.html        # Privacy Policy
 ├── terms.html          # Terms of Service
 ├── style.css           # Shared stylesheet
-└── README.md          # This file
+├── script.js           # FAQ accordion + screenshot lightbox
+├── serve.py            # Local preview server (clean URLs, like GitHub Pages)
+├── images/
+│   ├── brand/          # Logo lockups + app icon (source of truth in Advertising/Branding)
+│   └── screenshots/    # App screenshots used on the homepage
+└── README.md           # This file
 ```
 
 ## Deployment Instructions
@@ -151,16 +156,17 @@ To make changes:
 
 ## Local Development
 
-To test locally before deploying:
+To preview the site exactly as it will appear on GitHub Pages:
 
-1. Open `index.html` directly in a web browser, or
-2. Use a local web server:
-   ```bash
-   # Python 3
-   python3 -m http.server 8000
+```bash
+python3 serve.py          # serve on http://localhost:8000
+python3 serve.py 9000     # or pick another port
+```
 
-   # Then visit http://localhost:8000
-   ```
+`serve.py` resolves clean URLs (`/privacy`, `/terms`) to their `.html` files —
+just like GitHub Pages — and disables caching so edits show on refresh. Press
+Ctrl-C to stop. (Plain `python3 -m http.server` also works, but extensionless
+links like `/privacy` won't resolve.)
 
 ## Troubleshooting
 

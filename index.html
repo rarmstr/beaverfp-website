@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beaver FP - Financial Planning for busy beavers. Take control of your financial future with our comprehensive planning tools.">
-    <title>Beaver FP - Financial Planning for Busy Beavers</title>
+    <meta name="description" content="Beaver FP is the Canadian retirement planning app that lets you build your own financial plan — year-by-year projections with CPP, OAS, TFSA, RRSP and full Canadian tax, all on your device.">
+    <meta name="theme-color" content="#0D4234">
+    <title>Beaver FP — Canadian Retirement Planning You Control</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Beaver FP — Canadian Retirement Planning You Control">
+    <meta property="og:description" content="Build your own financial plan. See every projection and calculation, stress-test it, and override anything — all private, all on your device.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/brand/icon-1024.png">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <a href="/" class="logo">
-                <img src="images/beaver-logo.png" alt="Beaver FP" class="logo-image">
+            <a href="/" class="logo" aria-label="Beaver FP home">
+                <img src="images/brand/lockup-on-light.png" alt="Beaver FP" class="logo-image">
             </a>
             <nav>
                 <a href="/">Home</a>
+                <a href="#features">Features</a>
+                <a href="#how">How it works</a>
                 <a href="/privacy">Privacy</a>
                 <a href="/terms">Terms</a>
             </nav>
@@ -23,158 +33,207 @@
     </header>
 
     <main>
+        <!-- HERO -->
         <section class="hero">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Financial Planning for Canadians</h1>
-                    <p class="hero-subtitle">Year-by-year retirement projections with CPP, OAS, TFSA, RRSP, and Canadian tax calculations</p>
+                    <p class="hero-eyebrow">🇨🇦 Built exclusively for Canadians</p>
+                    <h1>Retirement planning you actually control</h1>
+                    <p class="hero-subtitle">
+                        Build your own financial plan and watch it unfold year by year — with real
+                        CPP, OAS, GIS, TFSA, RRSP and full federal + provincial tax calculations.
+                        See every number. Change anything.
+                    </p>
                     <a href="https://apps.apple.com/us/app/beaver-fp/id6751347553" class="app-store-button" target="_blank" rel="noopener">
                         <img src="images/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
                     </a>
-                    <div class="hero-welcome">
-                        <p>
-                            Whether you're planning for retirement, saving for your first home, or managing your investments,
-                            Beaver FP provides the tools you need to visualize and achieve your financial goals.
-                        </p>
-                    </div>
+                    <p class="hero-note">No accounts. No data collection. Your information never leaves your device.</p>
                 </div>
-                <div class="hero-images">
-                    <div class="hero-image">
-                        <img src="images/two-beavers.png" alt="Two busy beavers working together" class="hero-beaver-image">
-                    </div>
-                    <div class="hero-image">
-                        <img src="images/screenshots/plan_overview.png" alt="Beaver FP App Screenshot" class="hero-screenshot">
-                    </div>
+                <div class="hero-device">
+                    <img src="images/screenshots/plan_overview.png" alt="Beaver FP plan overview showing money flows and retirement projections" class="hero-screenshot">
                 </div>
             </div>
         </section>
 
-        <section class="problem-solution">
+        <!-- POSITIVE: BUILD YOUR OWN PLAN -->
+        <section class="build-section" id="build">
             <div class="container">
-                <div class="problem-box">
-                    <h2>American financial apps don't understand Canadian retirement</h2>
-                    <ul class="problem-list">
-                        <li>They ignore CPP and OAS integration</li>
-                        <li>They don't handle TFSA vs RRSP optimization</li>
-                        <li>They use US tax brackets and rules</li>
-                        <li>They miss provincial tax differences</li>
-                    </ul>
+                <div class="section-head">
+                    <h2>Build your own plan — and see everything</h2>
+                    <p class="section-lede">
+                        Beaver FP isn't a black box. Enter your situation once, and get a complete,
+                        transparent projection you can explore, test, and adjust as much as you like.
+                    </p>
                 </div>
-                <div class="solution-box">
-                    <h3>Beaver FP is built exclusively for Canadians</h3>
-                    <p>Complete retirement and financial planning with year-by-year projections and full Canadian tax calculations.</p>
+
+                <div class="build-grid">
+                    <div class="build-card">
+                        <span class="build-icon" aria-hidden="true">✏️</span>
+                        <h3>Enter your info, easily</h3>
+                        <p>Add income, expenses, accounts, debts and real estate — for yourself or a couple. Sensible defaults and built-in guidance get you to a plan in minutes.</p>
+                    </div>
+                    <div class="build-card">
+                        <span class="build-icon" aria-hidden="true">📈</span>
+                        <h3>See the projections</h3>
+                        <p>Watch your net worth, income, expenses and taxes play out year by year, from today through your expected longevity — with clear charts and money-flow diagrams.</p>
+                    </div>
+                    <div class="build-card">
+                        <span class="build-icon" aria-hidden="true">🔍</span>
+                        <h3>See every calculation</h3>
+                        <p>Every number is yours to inspect. Open any year and see exactly how income, withdrawals, benefits and tax were calculated. Nothing is hidden.</p>
+                    </div>
+                    <div class="build-card">
+                        <span class="build-icon" aria-hidden="true">🌪️</span>
+                        <h3>Stress-test the plan</h3>
+                        <p>Run Monte Carlo simulations and replay real market crashes — 2008, COVID, stagflation — to see how your plan holds up when markets don't cooperate.</p>
+                    </div>
+                    <div class="build-card">
+                        <span class="build-icon" aria-hidden="true">🔄</span>
+                        <h3>Update it as much as you like</h3>
+                        <p>Retire earlier, save more, move provinces, change your strategy — everything recalculates instantly. Create multiple plans and compare them side by side.</p>
+                    </div>
+                    <div class="build-card">
+                        <span class="build-icon" aria-hidden="true">🎛️</span>
+                        <h3>Override anything</h3>
+                        <p>Take full control. Override any value in any year — a one-time bonus, a variable-inflation stretch, a custom withdrawal order — and the whole projection responds.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <div class="container">
-            <section class="features-section">
-                <h2 class="section-title">Key Features</h2>
+            <!-- FEATURES -->
+            <section class="features-section" id="features">
+                <div class="section-head">
+                    <h2>Made for Canadian retirement</h2>
+                    <p class="section-lede">The accounts, benefits and tax rules that actually apply to you — modelled properly.</p>
+                </div>
                 <div class="feature-grid">
                     <div class="feature-card">
-                        <span class="feature-icon">🇨🇦</span>
-                        <h3>Canadian Retirement Income</h3>
-                        <p>Accurate CPP, OAS, and GIS calculations with bridge benefits and clawback modeling for all scenarios.</p>
+                        <span class="feature-icon">🍁</span>
+                        <h3>Canadian retirement income</h3>
+                        <p>Accurate CPP (start ages 60–70), OAS with clawback, GIS eligibility, and bridge benefits — modelled for real scenarios.</p>
                     </div>
                     <div class="feature-card">
                         <span class="feature-icon">💰</span>
-                        <h3>Tax-Advantaged Accounts</h3>
-                        <p>Track TFSA, RRSP, FHSA, and spousal RRSPs with automatic contribution room management.</p>
+                        <h3>Tax-advantaged accounts</h3>
+                        <p>TFSA, RRSP/RRIF, spousal RRSP, FHSA, LIRA/LIF and DCPP with automatic contribution-room tracking and conversion at 71.</p>
                     </div>
                     <div class="feature-card">
                         <span class="feature-icon">📍</span>
-                        <h3>Provincial Tax Accuracy</h3>
-                        <p>Precise calculations for all provinces and territories with both federal and provincial tax brackets.</p>
+                        <h3>Provincial tax accuracy</h3>
+                        <p>Full federal and provincial brackets for every province and territory, plus pension income-splitting optimization.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">👥</span>
+                        <h3>Couples &amp; households</h3>
+                        <p>Separate retirement ages and longevity, automatic pension splitting, and estate transfers on death — in one household view.</p>
                     </div>
                     <div class="feature-card">
                         <span class="feature-icon">📄</span>
-                        <h3>Professional PDF Reports</h3>
-                        <p>Generate detailed financial reports to share with your advisor or keep for your records.</p>
+                        <h3>Professional PDF reports</h3>
+                        <p>Generate a polished report — summary, projections and charts — to keep or share with your advisor.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🔒</span>
+                        <h3>Private by design</h3>
+                        <p>No servers, no tracking, no accounts. Everything stays on your device, with optional iCloud sync between your own devices.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="how-it-works">
-                <h2 class="section-title">How It Works</h2>
+            <!-- HOW IT WORKS -->
+            <section class="how-it-works" id="how">
+                <div class="section-head">
+                    <h2>How it works</h2>
+                </div>
                 <div class="steps-grid">
                     <div class="step-card">
                         <div class="step-number">1</div>
-                        <h3>Enter Your Financial Situation</h3>
-                        <p>Add your income, expenses, assets, debts, and retirement accounts. Set up your household for single or couple planning.</p>
+                        <h3>Enter your situation</h3>
+                        <p>Add your income, expenses, assets, debts and accounts. Set up a single or couple household.</p>
                     </div>
                     <div class="step-card">
                         <div class="step-number">2</div>
-                        <h3>See Your Retirement Projection</h3>
-                        <p>View year-by-year projections of your net worth, income, expenses, and tax obligations through your expected longevity.</p>
+                        <h3>See your projection</h3>
+                        <p>Get year-by-year net worth, income, expenses and taxes through your expected longevity.</p>
                     </div>
                     <div class="step-card">
                         <div class="step-number">3</div>
-                        <h3>Adjust and Optimize Your Plan</h3>
-                        <p>Test different scenarios: retire earlier, save more, optimize withdrawals, and find the path that works best for you.</p>
+                        <h3>Test &amp; refine</h3>
+                        <p>Stress-test, tweak assumptions, override values, and find the path that works best for you.</p>
                     </div>
                 </div>
             </section>
 
+            <!-- SCREENSHOTS -->
             <section class="screenshots-section">
-                <h2 class="section-title">See It In Action</h2>
+                <div class="section-head">
+                    <h2>See it in action</h2>
+                    <p class="section-lede">Tap any screen to view it full size.</p>
+                </div>
                 <div class="screenshots-grid">
-                    <div class="screenshot-item">
-                        <img src="images/screenshots/income_chart.png" alt="Income projections chart">
-                        <p class="screenshot-caption">Income Projections</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="images/screenshots/net_worth_chart.png" alt="Net worth tracking">
-                        <p class="screenshot-caption">Net Worth Tracking</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="images/screenshots/investment_details.png" alt="Investment details and portfolio tracking">
-                        <p class="screenshot-caption">Investment Details</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="images/screenshots/expenses.png" alt="Expense tracking and management">
-                        <p class="screenshot-caption">Expense Tracking</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="images/screenshots/override.png" alt="Override settings and customization">
-                        <p class="screenshot-caption">Custom Overrides</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="images/screenshots/pdf.png" alt="PDF Report Generation">
-                        <p class="screenshot-caption">Professional Reports</p>
-                    </div>
+                    <figure class="shot">
+                        <img src="images/screenshots/plan_overview.png" alt="Plan overview with goal, estate value and money-flow diagram" loading="lazy">
+                        <figcaption>Plan overview &amp; money flows</figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <img src="images/screenshots/simulation_table.png" alt="Year-by-year simulation table showing income, cash and investments" loading="lazy">
+                        <figcaption>Every year, every number</figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <img src="images/screenshots/stress_test.png" alt="Monte Carlo stress test with success rate and outcome bands" loading="lazy">
+                        <figcaption>Monte Carlo stress test</figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <img src="images/screenshots/income_expenses.png" alt="Income and expenses chart over time" loading="lazy">
+                        <figcaption>Income &amp; expenses</figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <img src="images/screenshots/investment_growth.png" alt="Investment growth projection chart" loading="lazy">
+                        <figcaption>Investment growth</figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <img src="images/screenshots/pdf_report.png" alt="Professional PDF financial planning report" loading="lazy">
+                        <figcaption>Professional PDF report</figcaption>
+                    </figure>
                 </div>
             </section>
 
+            <!-- SOCIAL PROOF -->
             <section class="social-proof">
                 <div class="proof-grid">
                     <div class="proof-item">
-                        <span class="proof-icon">🇨🇦</span>
+                        <span class="proof-icon">🍁</span>
                         <h3>Made in Alberta</h3>
-                        <p>Built by Canadians, for Canadians</p>
+                        <p>Built by Canadians, for Canadians.</p>
                     </div>
                     <div class="proof-item">
                         <span class="proof-icon">🔒</span>
-                        <h3>Privacy First</h3>
+                        <h3>Privacy first</h3>
                         <p>No data collection. Your information stays on your device.</p>
                     </div>
                     <div class="proof-item">
                         <span class="proof-icon">📱</span>
-                        <h3>Universal App</h3>
-                        <p>Works perfectly on iPhone and iPad</p>
+                        <h3>iPhone, iPad &amp; Mac</h3>
+                        <p>One universal app across all your Apple devices.</p>
                     </div>
                 </div>
             </section>
 
+            <!-- FAQ -->
             <section class="faq-section">
-                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="section-head">
+                    <h2>Frequently asked questions</h2>
+                </div>
                 <div class="faq-container">
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Does it work on iPad?</span>
+                            <span>Does it work on iPad and Mac?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Yes! Beaver FP is a universal app that works seamlessly on both iPhone and iPad with an interface optimized for each device.</p>
+                            <p>Yes. Beaver FP is a universal app that runs on iPhone, iPad and Mac, with an interface optimized for each.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -183,7 +242,16 @@
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Absolutely. All your financial data is stored locally on your device. We don't have any servers, we don't collect any data, and we never see your information. You can optionally use iCloud to sync between your devices.</p>
+                            <p>Absolutely. All your financial data is stored locally on your device. We have no servers, collect no data, and never see your information. You can optionally use iCloud to sync between your own devices.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I really see and change every calculation?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes — that's the whole point. Open any year to see how each number was calculated, and use overrides to change any value in any year. The entire projection recalculates instantly.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -192,15 +260,16 @@
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>No, Beaver FP complements your financial advisor. Use it to model scenarios, understand your financial trajectory, and generate reports to discuss with your advisor. It's a planning tool, not professional financial advice.</p>
+                            <p>No. Beaver FP complements your advisor. Use it to model scenarios, understand your trajectory, and generate reports to discuss. It's a planning tool, not professional financial advice.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- CONTACT -->
             <section class="contact-section">
-                <h2>Get in Touch</h2>
-                <p class="contact-intro">Have questions, feedback, or suggestions? We'd love to hear from you!</p>
+                <h2>Get in touch</h2>
+                <p class="contact-intro">Questions, feedback, or suggestions? We'd love to hear from you.</p>
                 <div class="contact-email-box">
                     <a href="mailto:support@beaverfp.com" class="contact-email">support@beaverfp.com</a>
                 </div>
@@ -211,9 +280,17 @@
 
     <footer>
         <div class="footer-content">
+            <div class="footer-section footer-brand">
+                <img src="images/brand/lockup-on-dark.png" alt="Beaver FP" class="footer-logo">
+                <p>Canadian financial planning, designed with your privacy in mind.</p>
+            </div>
             <div class="footer-section">
-                <h4>Beaver FP</h4>
-                <p>Financial planning tools designed with your privacy in mind.</p>
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how">How it works</a></li>
+                    <li><a href="https://apps.apple.com/us/app/beaver-fp/id6751347553" target="_blank" rel="noopener">Download</a></li>
+                </ul>
             </div>
             <div class="footer-section">
                 <h4>Legal</h4>
@@ -225,12 +302,12 @@
             <div class="footer-section">
                 <h4>Contact</h4>
                 <ul>
-                    <li>Email: <a href="mailto:support@beaverfp.com">support@beaverfp.com</a></li>
+                    <li><a href="mailto:support@beaverfp.com">support@beaverfp.com</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Rob Armstrong - All Rights Reserved</p>
+            <p>&copy; 2025 Rob Armstrong — All Rights Reserved</p>
         </div>
     </footer>
 
