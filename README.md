@@ -16,14 +16,39 @@ beaverfp-website/
 ├── index.html          # Homepage
 ├── privacy.html        # Privacy Policy
 ├── terms.html          # Terms of Service
-├── style.css           # Shared stylesheet
-├── script.js           # FAQ accordion + screenshot lightbox
+├── style.css           # Shared stylesheet (light + dark)
+├── script.js           # FAQ accordion, demo video controls, screenshot lightbox
 ├── serve.py            # Local preview server (clean URLs, like GitHub Pages)
+├── sitemap.xml         # Listed in robots.txt
+├── robots.txt
+├── scripts/
+│   └── build-assets.sh # Regenerates images/ and video/ from the bfp1 app repo
 ├── images/
 │   ├── brand/          # Logo lockups + app icon (source of truth in Advertising/Branding)
-│   └── screenshots/    # App screenshots used on the homepage
+│   ├── og-card.jpg     # 1200x630 social card (generated)
+│   └── screenshots/    # App screenshots, 1x + @2x (generated)
+├── video/              # Demo tour cut + poster (generated)
 └── README.md           # This file
 ```
+
+## Regenerating images and video
+
+`images/screenshots/`, `images/og-card.jpg` and `video/` are all **generated** from
+the app repo — don't hand-edit them. After recapturing screenshots or re-rendering
+a video in `bfp1`, run:
+
+```bash
+./scripts/build-assets.sh ~/project/bfp1
+```
+
+It emits 1x and @2x JPEGs, the web video cut, its poster frame, and the OG card,
+then prints the resulting sizes. Two things it deliberately does:
+
+- **Uses the 4:3 video master, not the `-youtube` rendition.** That rendition is
+  pillarboxed (1440x1080 of picture inside a 1920x1080 frame), so it would show
+  black bars on the page.
+- **Skips the landscape iPhone chart screenshots** (`04`–`06`), whose legends wrap
+  one character per line at that width.
 
 ## Deployment Instructions
 
@@ -145,7 +170,9 @@ Use these exact URLs in your App Store Connect submission.
 To make changes:
 
 1. Edit the HTML/CSS files locally
-2. Test locally by opening `index.html` in a browser
+2. Test locally with `python3 serve.py` — **not** by opening `index.html`
+   directly, and not with plain `python3 -m http.server`. Both of those 404 on
+   `/privacy` and `/terms`, which are the two URLs referenced from App Store Connect.
 3. Commit and push changes:
    ```bash
    git add .
@@ -199,4 +226,4 @@ For questions about this website, contact:
 
 ## License
 
-© 2025 Rob Armstrong. All Rights Reserved.
+© 2026 Rob Armstrong. All Rights Reserved.

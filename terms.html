@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Terms of Service for Beaver FP - Financial planning application.">
     <title>Terms of Service - Beaver FP</title>
+    <meta name="theme-color" content="#0D4234" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b1512" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://beaverfp.com/terms">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <a href="/" class="logo">
-                <img src="images/brand/lockup-on-light.png" alt="Beaver FP" class="logo-image">
+            <a href="/" class="logo" aria-label="Beaver FP home">
+                <picture>
+                    <source srcset="images/brand/lockup-on-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="images/brand/lockup-on-light.png" alt="Beaver FP" class="logo-image" width="160" height="40">
+                </picture>
             </a>
-            <nav>
+            <nav aria-label="Primary">
                 <a href="/">Home</a>
                 <a href="/privacy">Privacy</a>
                 <a href="/terms">Terms</a>
