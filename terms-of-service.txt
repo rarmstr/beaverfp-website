@@ -1,6 +1,6 @@
 TERMS OF SERVICE
 
-Last Updated: October 27, 2025
+Last Updated: August 13, 2026
 
 IMPORTANT: Please read these Terms of Service carefully before using Beaver FP. By downloading, installing, or using the app, you agree to be bound by these terms.
 
@@ -42,14 +42,17 @@ Limitations of Projections:
 - Tax laws, investment returns, and economic conditions are subject to change
 - The App cannot account for all individual circumstances or future events
 
-4. DATA STORAGE AND PRIVACY
+4. DATA STORAGE, SYNC AND PRIVACY
 
-All data you enter into Beaver FP is stored exclusively on your device using Apple's local storage systems:
+Data you enter into Beaver FP is stored on your device and, with a subscription and an iCloud account, synced to your other Apple devices through your own Apple Account using Apple's CloudKit:
 
-- Local Storage Only: Your financial data never leaves your device and is not transmitted to any servers.
-- No Cloud Storage: We do not maintain servers or cloud databases. We cannot access, view, or recover your data.
-- Your Responsibility: You are solely responsible for backing up your device and data. We recommend using iCloud or iTunes backups.
-- Data Loss: If you delete the App or lose your device without backing up, your data cannot be recovered by us.
+- No Beaver FP Servers: We do not maintain servers or cloud databases. Your data never passes through infrastructure we control, and we cannot access, view, or recover it.
+- Your iCloud Account: Sync writes to the private database of your own Apple Account, not to any account or storage of ours. Your use of iCloud is governed by your agreement with Apple, and Apple's terms, storage limits and service availability apply to it.
+- Sync Requires a Subscription: Syncing across devices is part of a paid subscription. With one, sync is on by default when you are signed in to iCloud; without one, your plans stay on the device you are using. You can turn sync off in the App's settings at any time.
+- If a Subscription Ends: Syncing stops. Nothing is deleted - the plans already on your devices and in your iCloud stay exactly where they are, and syncing resumes if you subscribe again.
+- Sync Is Not a Backup: Sync mirrors your current plan across your devices, including deletions - deleting a plan on one device deletes it on the others. It is not an archive, a version history, or a recovery service.
+- Your Responsibility: You are solely responsible for backing up your device and exporting anything you need to keep. We recommend maintaining device backups through iCloud or your computer.
+- Data Loss: If you delete the App, delete your data, or lose access to your Apple Account without a backup, we cannot recover your data, because we never hold a copy of it. We are not responsible for data loss, corruption, or unavailability arising from iCloud, your Apple Account, or any interruption of Apple's services.
 
 For complete details, please see our Privacy Policy at https://beaverfp.com/privacy
 
@@ -59,6 +62,7 @@ When using Beaver FP, you agree to:
 
 - Accurate Information: Enter accurate and truthful financial information
 - Device Security: Maintain the security of your device, including using strong passwords and biometric authentication
+- Account Security: Maintain the security of the Apple Account you sync with, including two-factor authentication
 - Regular Backups: Back up your device regularly to prevent data loss
 - Compliance: Use the App in compliance with all applicable laws and regulations
 - Updates: Keep the App updated to the latest version for security and functionality
