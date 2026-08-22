@@ -490,6 +490,20 @@ nav a:hover { color: var(--accent); }
 .feature-icon .icon { width: 1.75rem; height: 1.75rem; }
 .feature-card h3 { color: var(--heading); margin-bottom: 0.5rem; font-size: 1.12rem; }
 .feature-card p { color: var(--text-muted); }
+.soon-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  white-space: nowrap;
+}
 
 /* ---------- Devices ---------- */
 .devices-section { padding: var(--section-y) 0; background: var(--bg-alt); }
