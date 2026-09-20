@@ -744,6 +744,13 @@ footer {
 .modal-close:hover { color: var(--gold); }
 
 /* ---------- Responsive ---------- */
+/* Four build cards resolve to 3 + 1 across this band, stranding the last one
+   alone on its own row. Two-by-two is the balanced arrangement here; wider
+   than this the grid fits all four, narrower it reaches two columns itself. */
+@media (min-width: 800px) and (max-width: 1059px) {
+  .build-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 900px) {
   .insights-layout,
   .split { grid-template-columns: 1fr; }
