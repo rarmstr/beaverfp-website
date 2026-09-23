@@ -313,6 +313,21 @@ nav a:hover { color: var(--accent); }
   white-space: nowrap;
 }
 
+.opp-note { color: var(--text-muted); font-size: 0.95rem; margin-top: 1rem; }
+.opp-note strong { color: var(--heading); font-weight: 600; }
+
+/* ---------- Plan overview ---------- */
+.overview-section { padding: var(--section-y) 0; background: var(--bg-alt); }
+/* Three cards: one row, or one column. Never two-plus-one. */
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 799px) {
+  .overview-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- Video ---------- */
 .video-section {
   padding: var(--section-y) 0;

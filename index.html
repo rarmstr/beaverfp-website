@@ -30,7 +30,7 @@
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "iOS, iPadOS, macOS",
       "url": "https://beaverfp.com/",
-      "description": "Canadian retirement planning app. Year-by-year projections with CPP, OAS, GIS, TFSA, RRSP and full federal and provincial tax. Finds and prices opportunities in your plan, and stress-tests it with Monte Carlo simulation. Your plan stays on your device and can sync through your own iCloud account — there are no Beaver FP servers and no accounts.",
+      "description": "Canadian retirement planning app. Year-by-year projections with CPP, OAS, GIS, TFSA, RRSP and full federal and provincial tax. Finds and prices opportunities in your plan, stress-tests it with Monte Carlo simulation, and turns it into year-by-year steps. Your plan stays on your device and can sync through your own iCloud account — there are no Beaver FP servers and no accounts.",
       "downloadUrl": "https://apps.apple.com/ca/app/beaver-fp/id6751347553",
       "offers": {
         "@type": "Offer",
@@ -42,9 +42,10 @@
       "featureList": [
         "Year-by-year retirement projections",
         "CPP, OAS with clawback, GIS and bridge benefits",
-        "TFSA, RRSP/RRIF, spousal RRSP, FHSA, LIRA/LIF, DCPP",
+        "TFSA, RRSP/RRIF, spousal RRSP, FHSA, LIRA/LIF with provincial limits, DCPP",
         "Federal and provincial tax for every province and territory",
         "Financial Insights — ranked, priced opportunities",
+        "An implementation plan: the steps to carry out your plan, year by year",
         "Monte Carlo stress testing and historical market crashes",
         "Eleven charts including OAS clawback, tax mix and contribution room",
         "Professional PDF reports"
@@ -59,7 +60,7 @@
         {
           "@type": "Question",
           "name": "What is Financial Insights?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Financial Insights reads your plan and ranks specific changes worth making — turning on pension splitting, starting an RRSP meltdown, filling unused TFSA room — with a dollar value on each. It also answers three questions directly: when you can retire, how much more you can spend, and what return your plan needs." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Financial Insights reads your plan and ranks specific changes worth making — turning on pension splitting, starting an RRSP meltdown, filling unused TFSA room — with a dollar value on each, ranked by what matters most to you. It also answers three questions directly: when you can retire, how much more you can spend, and what return your plan needs." }
         },
         {
           "@type": "Question",
@@ -119,6 +120,8 @@
     <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M2.75 12.5h3.4l2.6-7.4 4.15 14.2 2.9-9.05 1.85 2.25h3.6"/></symbol>
     <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2.9H7.4a2.4 2.4 0 0 0-2.4 2.4v13.4a2.4 2.4 0 0 0 2.4 2.4h9.2a2.4 2.4 0 0 0 2.4-2.4V7.9L14 2.9z"/><path d="M13.9 3v5h5.1"/><path d="M8.75 13.4h6.5M8.75 16.9h4.25"/></symbol>
     <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 10.4L12 3.6l8.5 6.8"/><path d="M5.6 12.1v8.3h12.8v-8.3"/><path d="M9.9 20.4v-5.2h4.2v5.2"/></symbol>
+    <symbol id="i-checklist" viewBox="0 0 24 24"><path d="M3.5 6.25l1.6 1.6 2.9-2.9M3.5 12.75l1.6 1.6 2.9-2.9"/><path d="M11 6.75h9.5M11 13.25h9.5M11 19.25h9.5"/><circle cx="5.6" cy="19.25" r="1.1"/></symbol>
+    <symbol id="i-flow" viewBox="0 0 24 24"><path d="M3 6.5h4.5c3.5 0 4 5.5 7.5 5.5H21"/><path d="M3 17.5h4.5c3.5 0 4-5.5 7.5-5.5"/><path d="M17.5 8.5L21 12l-3.5 3.5"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.75l12.5 7.25L7 19.25V4.75z" fill="currentColor" stroke="none"/></symbol>
     <symbol id="i-pause" viewBox="0 0 24 24"><path d="M7.5 4.5h3.25v15H7.5zM13.25 4.5h3.25v15h-3.25z" fill="currentColor" stroke="none"/></symbol>
     <symbol id="i-sound-off" viewBox="0 0 24 24"><path d="M11.25 4.9L6.4 8.85H3.15v6.3H6.4l4.85 3.95V4.9z"/><path d="M15.6 9.6l4.8 4.8M20.4 9.6l-4.8 4.8"/></symbol>
@@ -174,7 +177,7 @@
                 <img src="images/screenshots/overview-ipad-light.jpg"
                      srcset="images/screenshots/overview-ipad-light.jpg 900w, images/screenshots/overview-ipad-light@2x.jpg 1800w"
                      sizes="(max-width: 860px) 92vw, 46vw"
-                     alt="Beaver FP plan overview on iPad showing the Financial Insights banner, plan goal, estate value and a money-flow diagram"
+                     alt="Beaver FP plan overview on iPad showing the Financial Insights banner, plan goal and estate value, above Money Flows, Timeline and Steps tabs with a money-flow diagram"
                      class="hero-screenshot" width="900" height="675" fetchpriority="high">
             </div>
         </div>
@@ -245,21 +248,56 @@
                     <ul class="opportunity-list">
                         <li>
                             <span class="opp-title">Contributions aren&rsquo;t keeping up with inflation</span>
-                            <span class="opp-value">$316,838</span>
+                            <span class="opp-value">$89,426</span>
                         </li>
                         <li>
                             <span class="opp-title">Start an RRSP meltdown at retirement</span>
-                            <span class="opp-value">$88,336</span>
+                            <span class="opp-value">$21,087</span>
                         </li>
                         <li>
                             <span class="opp-title">$9,400 of unused TFSA room</span>
                             <span class="opp-value">Show me</span>
                         </li>
                     </ul>
+                    <p class="opp-note">
+                        Choose what matters most — <strong>Spend it all</strong>, <strong>Balanced</strong> or
+                        <strong>Leave a legacy</strong> — and the opportunities are valued and ranked that way.
+                        Your plan&rsquo;s own numbers never change.
+                    </p>
                     <p class="fineprint">
                         Values shown in today&rsquo;s dollars, from the example plan pictured. Projections are
                         illustrative and are not financial advice.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ PLAN OVERVIEW ============================ -->
+    <section class="overview-section" id="overview">
+        <div class="container">
+            <div class="section-head">
+                <h2>From a plan to a to-do list</h2>
+                <p class="section-lede">
+                    The Plan Overview splits your plan across three tabs, and every one can show you, your
+                    spouse or the whole family.
+                </p>
+            </div>
+            <div class="overview-grid">
+                <div class="build-card">
+                    <span class="build-icon"><svg class="icon" aria-hidden="true"><use href="#i-checklist"/></svg></span>
+                    <h3>Steps</h3>
+                    <p>Your implementation plan. When to apply for CPP, OAS, GIS and each pension, when to convert an account or close an FHSA, and any year a contribution exceeds your room — grouped by year, with how to do each. The PDF report prints the same list.</p>
+                </div>
+                <div class="build-card">
+                    <span class="build-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
+                    <h3>Timeline</h3>
+                    <p>Every milestone on a true year scale, with a line for each person that ends at their final year — so a gap of a decade looks like one.</p>
+                </div>
+                <div class="build-card">
+                    <span class="build-icon"><svg class="icon" aria-hidden="true"><use href="#i-flow"/></svg></span>
+                    <h3>Money Flows</h3>
+                    <p>Where each year&rsquo;s money comes from and where it goes, in the same colours as the charts — ending with what&rsquo;s left as your estate.</p>
                 </div>
             </div>
         </div>
@@ -389,7 +427,7 @@
                 <div class="build-card">
                     <span class="build-icon"><svg class="icon" aria-hidden="true"><use href="#i-pencil"/></svg></span>
                     <h3>Enter your situation once</h3>
-                    <p>Income, expenses, accounts, debts and pensions — for one person or a couple. Sensible defaults get you to a working plan in minutes.</p>
+                    <p>Income, expenses, accounts, debts and pensions — for one person or a couple. Quick Plan gets you started in seven short screens, then opens on what Financial Insights makes of your numbers.</p>
                 </div>
                 <div class="build-card">
                     <span class="build-icon"><svg class="icon" aria-hidden="true"><use href="#i-rows"/></svg></span>
@@ -426,12 +464,12 @@
                 <div class="feature-card">
                     <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-bank"/></svg></span>
                     <h3>Registered accounts</h3>
-                    <p>TFSA, RRSP/RRIF, spousal RRSP, FHSA, LIRA/LIF and DCPP, with contribution room tracked year by year and conversion at 71. Contributions you claim on your return, rather than through payroll, come back as a refund the following year.</p>
+                    <p>TFSA, RRSP/RRIF, spousal RRSP, FHSA, LIRA/LIF and DCPP, with contribution room tracked year by year and conversion at 71. Each LIF pays within its province&rsquo;s minimum and maximum, and where your province allows it you can unlock half of a locked-in account when it converts. Contributions you claim on your return, rather than through payroll, come back as a refund the following year.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
                     <h3>Provincial tax accuracy</h3>
-                    <p>Full federal and provincial brackets for every province and territory, plus pension income-splitting optimization.</p>
+                    <p>Full federal and provincial brackets for every province and territory, with basic personal amounts indexed each year, CPP contributions and EI premiums withheld from pay, and pension income-splitting optimization.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
@@ -446,7 +484,7 @@
                 <div class="feature-card">
                     <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg></span>
                     <h3>Professional PDF reports</h3>
-                    <p>Generate a polished report — summary, projections and charts — to keep or bring to your advisor.</p>
+                    <p>Generate a polished report — summary, projections, charts, tax details and your year-by-year steps — to keep or bring to your advisor.</p>
                 </div>
             </div>
         </div>
@@ -526,7 +564,7 @@
                 <div class="step-card">
                     <div class="step-number">3</div>
                     <h3>Improve and test it</h3>
-                    <p>Apply the opportunities worth taking, override what you like, then stress-test the result.</p>
+                    <p>Apply the opportunities worth taking, override what you like and stress-test the result — then follow the Steps to put it in place.</p>
                 </div>
             </div>
         </div>
@@ -543,7 +581,7 @@
                 <figure class="shot">
                     <button type="button" class="shot-button">
                         <img src="images/screenshots/overview-ipad-dark.jpg" data-full="images/screenshots/overview-ipad-dark@2x.jpg"
-                             alt="Plan overview with goal, estate value and money-flow diagram" loading="lazy" width="900" height="675">
+                             alt="Plan overview with goal and estate value above Money Flows, Timeline and Steps tabs and a money-flow diagram" loading="lazy" width="900" height="675">
                     </button>
                     <figcaption>Plan overview &amp; money flows</figcaption>
                 </figure>
@@ -599,7 +637,7 @@
                         <span class="faq-icon" aria-hidden="true">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>It reads your plan and ranks specific changes worth making — turning on pension splitting, starting an RRSP meltdown, filling unused TFSA room — with a dollar value on each, in today&rsquo;s dollars. It also answers three questions directly: when you can retire, how much more you can spend, and what return your plan needs. Every card explains its reasoning, and with an annual or lifetime subscription it applies in one tap.</p>
+                        <p>It reads your plan and ranks specific changes worth making — turning on pension splitting, starting an RRSP meltdown, filling unused TFSA room — with a dollar value on each, in today&rsquo;s dollars, ranked by what matters most to you. It also answers three questions directly: when you can retire, how much more you can spend, and what return your plan needs. Every card explains its reasoning, and with an annual or lifetime subscription it applies in one tap.</p>
                     </div>
                 </div>
                 <div class="faq-item">
