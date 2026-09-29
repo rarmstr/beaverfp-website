@@ -124,6 +124,37 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  /* ---------------- Gallery strip ----------------
+     Touch swipes the row; these arrows are for a mouse or trackpad. Each
+     press moves most of a screenful, and scroll snapping settles it on an
+     image. An arrow is disabled at its end of the row. */
+  const strip = document.getElementById('storeStrip');
+  const stripButtons = document.querySelectorAll('.strip-button');
+
+  if (strip && stripButtons.length) {
+    const stripReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const updateStripButtons = () => {
+      const end = strip.scrollWidth - strip.clientWidth - 2;
+      stripButtons.forEach(button => {
+        button.disabled = button.dataset.dir === '-1' ? strip.scrollLeft <= 2 : strip.scrollLeft >= end;
+      });
+    };
+
+    stripButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        strip.scrollBy({
+          left: Number(button.dataset.dir) * strip.clientWidth * 0.8,
+          behavior: stripReduceMotion ? 'auto' : 'smooth'
+        });
+      });
+    });
+
+    strip.addEventListener('scroll', updateStripButtons, { passive: true });
+    window.addEventListener('resize', updateStripButtons);
+    updateStripButtons();
+  }
+
   /* ---------------- Screenshot modal ---------------- */
   const modal = document.getElementById('imageModal');
   const modalImg = document.getElementById('modalImage');

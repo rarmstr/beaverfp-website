@@ -44,15 +44,10 @@ resize "$SHOTS/ipad-light/02_plan_overview.png"        overview-ipad-light   180
 resize "$SHOTS/ipad-dark/11_financial_insights.png"    insights-ipad-dark    1800
 resize "$SHOTS/ipad-dark/06_chart_net_worth.png"       charts-ipad-dark      1800
 resize "$SHOTS/ipad-dark/10_stress_test_monte_carlo.png" stress-ipad-dark    1800
-resize "$SHOTS/ipad-dark/03_simulation_table.png"      simulation-ipad-dark  1800
-resize "$SHOTS/ipad-dark/08_pdf_report.png"            pdf-ipad-dark         1800
-resize "$SHOTS/ipad-dark/02_plan_overview.png"         overview-ipad-dark    1800
 
 # iPhone 1320x2868 (portrait). Displayed up to ~320px wide.
 resize "$SHOTS/iphone-light/02_plan_overview.png"      overview-iphone-light  640
-resize "$SHOTS/iphone-light/11_financial_insights.png" insights-iphone-light  640
 resize "$SHOTS/iphone-dark/11_financial_insights.png"  insights-iphone-dark   640
-resize "$SHOTS/iphone-light/03_simulation_table.png"   simulation-iphone-light 640
 resize "$SHOTS/iphone-light/18_quick_plan_summary.png" quickplan-iphone-light  640
 
 # Mac 2880x1800 (16:10).

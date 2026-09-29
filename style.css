@@ -257,17 +257,54 @@ nav a:hover { color: var(--accent); }
 .app-store-button:hover { transform: translateY(-2px); }
 .app-store-badge { height: 54px; width: auto; }
 
-.hero-note {
-  display: inline-flex;
-  align-items: center;
+.hero-notes { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+.hero-notes li {
+  display: flex;
+  align-items: flex-start;
   gap: 0.5rem;
   font-size: 0.9rem;
   color: rgba(205, 232, 210, 0.85);
+  text-align: left;
 }
-.hero-note .icon { width: 1.1rem; height: 1.1rem; }
+.hero-notes .icon { width: 1.1rem; height: 1.1rem; margin-top: 0.2rem; }
 
 .hero-device { display: flex; justify-content: center; }
 .hero-screenshot { max-width: 100%; box-shadow: var(--shadow-lg); outline-color: rgba(255, 255, 255, 0.14); }
+
+/* ---------- Quick Plan ---------- */
+.quickplan-section { padding: var(--section-y) 0; background: var(--bg-alt); }
+.quickplan-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 300px);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.qp-steps { list-style: none; counter-reset: qp; }
+.qp-steps li {
+  counter-increment: qp;
+  display: grid;
+  grid-template-columns: 2.1rem 1fr;
+  column-gap: 0.95rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.qp-steps li:last-child { border-bottom: none; }
+.qp-steps li::before {
+  content: counter(qp);
+  grid-row: span 2;
+  width: 2.1rem; height: 2.1rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.qp-steps strong { display: block; font-size: 1.05rem; }
+.qp-steps span { color: var(--text-muted); font-size: 0.95rem; }
+.qp-note { margin-top: 1.25rem; color: var(--text-muted); text-wrap: pretty; }
 
 /* ---------- Insights ---------- */
 .insights-section { padding: var(--section-y) 0; background: var(--bg); }
@@ -280,7 +317,7 @@ nav a:hover { color: var(--accent); }
   align-items: center;
 }
 
-.question-list, .opportunity-list, .tick-list, .chart-list { list-style: none; }
+.question-list, .opportunity-list, .tick-list, .chip-list { list-style: none; }
 
 .question-list li {
   display: flex;
@@ -315,6 +352,10 @@ nav a:hover { color: var(--accent); }
 
 .opp-note { color: var(--text-muted); font-size: 0.95rem; margin-top: 1rem; }
 .opp-note strong { color: var(--heading); font-weight: 600; }
+
+.insight-kinds { max-width: 880px; margin: clamp(2.5rem, 5vw, 3.5rem) auto 0; text-align: center; }
+.insight-kinds .chip-list { justify-content: center; margin-bottom: 0; }
+.insight-kinds .chip-list li { background: var(--surface-alt); }
 
 /* ---------- Plan overview ---------- */
 .overview-section { padding: var(--section-y) 0; background: var(--bg-alt); }
@@ -424,13 +465,13 @@ nav a:hover { color: var(--accent); }
 }
 .split-reverse .device-shot { order: 2; }
 
-.chart-list {
+.chip-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.75rem;
 }
-.chart-list li {
+.chip-list li {
   background: var(--surface);
   border: 1px solid var(--border-strong);
   border-radius: 999px;
@@ -505,20 +546,6 @@ nav a:hover { color: var(--accent); }
 .feature-icon .icon { width: 1.75rem; height: 1.75rem; }
 .feature-card h3 { color: var(--heading); margin-bottom: 0.5rem; font-size: 1.12rem; }
 .feature-card p { color: var(--text-muted); }
-.soon-badge {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 0.4rem;
-  padding: 0.15rem 0.55rem;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--accent);
-  border: 1px solid currentColor;
-  border-radius: 999px;
-  white-space: nowrap;
-}
 
 /* ---------- Devices ---------- */
 .devices-section { padding: var(--section-y) 0; background: var(--bg-alt); }
@@ -560,44 +587,75 @@ nav a:hover { color: var(--accent); }
   margin-bottom: 1rem;
   text-wrap: balance;
 }
+.privacy-points {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.privacy-points li {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(205, 232, 210, 0.12);
+  border: 1px solid rgba(205, 232, 210, 0.25);
+  color: var(--band-accent);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+/* A little wider than the paragraph, so the four points sit on one line. */
+@media (min-width: 760px) {
+  .privacy-points { margin-inline: -3rem; }
+}
 .privacy-inner p { color: var(--band-text-muted); margin-bottom: 1.5rem; text-wrap: pretty; }
 .privacy-inner .text-link { color: var(--band-accent); }
 
-/* ---------- How it works ---------- */
-.how-it-works { padding: var(--section-y) 0; background: var(--bg); }
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.25rem;
-}
-.step-card {
-  background: var(--surface);
-  padding: 2rem 1.75rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-}
-.step-number {
-  width: 52px; height: 52px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-  color: #ffffff;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.45rem; font-weight: 800;
-  margin: 0 auto 1.15rem;
-}
-.step-card h3 { color: var(--heading); margin-bottom: 0.5rem; font-size: 1.15rem; }
-.step-card p { color: var(--text-muted); }
-
 /* ---------- Gallery ---------- */
 .screenshots-section { padding: var(--section-y) 0; background: var(--bg-alt); }
-.screenshots-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem 1.5rem;
+
+/* The App Store images in one swipeable row. It runs the full width of the
+   page, but its first image lines up with the container's left edge. */
+.store-strip {
+  --strip-inset: max(1.25rem, calc(50% - var(--max-width) / 2 + 1.25rem));
+  list-style: none;
+  display: flex;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--strip-inset);
+  padding: 0.5rem var(--strip-inset) 2rem;
+  scrollbar-width: none;
 }
-.shot { text-align: center; min-width: 0; }
+.store-strip::-webkit-scrollbar { display: none; }
+.store-strip li { flex: 0 0 clamp(200px, 64vw, 250px); scroll-snap-align: start; }
+.store-strip .shot-button img { border-radius: 18px; }
+/* Inside a scroller the large hover shadow gets clipped; keep it modest. */
+.store-strip .shot-button:hover img { box-shadow: var(--shadow-md); }
+
+/* Arrows for mouse and trackpad; touch swipes the row. */
+.strip-controls { display: none; justify-content: flex-end; gap: 0.6rem; }
+@media (hover: hover) and (pointer: fine) {
+  .strip-controls { display: flex; }
+}
+.strip-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--heading);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, opacity 0.2s;
+}
+.strip-button .icon { width: 1.3rem; height: 1.3rem; stroke-width: 2; }
+.strip-button:hover:not(:disabled) { color: var(--accent); border-color: var(--accent); }
+.strip-button:disabled { opacity: 0.35; cursor: default; }
+
 .shot-button {
   display: block;
   width: 100%;
@@ -617,12 +675,6 @@ nav a:hover { color: var(--accent); }
   transition: transform 0.25s, box-shadow 0.25s;
 }
 .shot-button:hover img { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-.shot figcaption {
-  margin-top: 0.85rem;
-  font-weight: 700;
-  color: var(--heading);
-  font-size: 0.98rem;
-}
 
 /* ---------- FAQ ---------- */
 .faq-section { padding: var(--section-y) 0; background: var(--bg); }
@@ -768,7 +820,9 @@ footer {
 
 @media (max-width: 900px) {
   .insights-layout,
+  .quickplan-layout,
   .split { grid-template-columns: 1fr; }
+  .quickplan-visual img { max-width: min(280px, 72vw); margin-inline: auto; }
   .split-reverse .device-shot { order: 0; }
   .devices-grid { grid-template-columns: 1fr 1fr; }
   .devices-grid .device-tile:first-child { grid-column: 1 / -1; }
@@ -792,15 +846,20 @@ footer {
   .header-content { flex-direction: column; gap: 0.5rem; }
   .logo-image { height: 34px; }
   /* Six items is a tight fit at phone width; without this "Terms" orphans
-     onto a line of its own. */
-  nav { justify-content: center; gap: 0.2rem 0.8rem; }
-  nav a { font-size: 0.85rem; }
+     onto a line of its own. Sized to fit one line down to 360px wide. */
+  nav { justify-content: center; gap: 0.2rem 0.55rem; }
+  nav a { font-size: 0.8rem; }
   .devices-grid { grid-template-columns: 1fr; }
   .build-card, .feature-card { padding: 1.4rem; }
   .opportunity-list li { flex-direction: column; gap: 0.2rem; }
   .footer-content { grid-template-columns: 1fr; text-align: center; }
   .footer-logo { margin-left: auto; margin-right: auto; }
   .footer-brand p { max-width: none; }
+}
+
+/* Narrower than that, two even rows of three rather than five and one. */
+@media (max-width: 359px) {
+  nav { display: grid; grid-template-columns: repeat(3, auto); }
 }
 
 /* ---------- Motion / a11y ---------- */
