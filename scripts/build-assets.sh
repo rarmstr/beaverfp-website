@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 # Build web assets from the bfp1 app repo.
 #
-# Screenshots come from bfp1/Screenshots/<device-appearance>/, the demo video
-# from bfp1/build/video/s03-demo-ipad/. Re-run this after regenerating either;
-# it overwrites everything it produces and touches nothing else.
+# Screenshots come from bfp1/Screenshots/raw/<device-appearance>/ (where
+# capture_screenshots.sh writes them), the App Store images from
+# bfp1/Screenshots/framed/, the demo video from bfp1/build/video/s03-demo-ipad/.
+# Re-run this after regenerating any of them; it overwrites everything it
+# produces and touches nothing else.
 #
 #   ./scripts/build-assets.sh [path-to-bfp1]
 
@@ -11,11 +13,12 @@ set -euo pipefail
 
 APP="${1:-$HOME/project/bfp1}"
 WEB="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SHOTS="$APP/Screenshots"
+SHOTS="$APP/Screenshots/raw"
+FRAMED="$APP/Screenshots/framed"
 OUT="$WEB/images/screenshots"
 VID="$WEB/video"
 
-[ -d "$SHOTS" ] || { echo "No Screenshots dir at $SHOTS" >&2; exit 1; }
+[ -d "$SHOTS" ] || { echo "No raw screenshots at $SHOTS" >&2; exit 1; }
 mkdir -p "$OUT" "$VID"
 
 # JPEG quality. Screenshots are flat UI, so this is generous; verify with `du`.
@@ -50,9 +53,18 @@ resize "$SHOTS/iphone-light/02_plan_overview.png"      overview-iphone-light  64
 resize "$SHOTS/iphone-light/11_financial_insights.png" insights-iphone-light  640
 resize "$SHOTS/iphone-dark/11_financial_insights.png"  insights-iphone-dark   640
 resize "$SHOTS/iphone-light/03_simulation_table.png"   simulation-iphone-light 640
+resize "$SHOTS/iphone-light/18_quick_plan_summary.png" quickplan-iphone-light  640
 
 # Mac 2880x1800 (16:10).
 resize "$SHOTS/mac/02_plan_overview.png"               overview-mac          1800
+
+# App Store images, iPhone set (1320x2868, title and subtitle baked in).
+# Shown as the gallery strip at up to ~280px wide; the @2x doubles as the
+# full-size view.
+for src in "$FRAMED"/iphone/[0-9][0-9]_*.png; do
+  base="$(basename "$src" .png)"
+  resize "$src" "store-${base//_/-}" 720
+done
 
 # ---------------------------------------------------------------- video
 # The 4:3 master, not the "youtube" rendition -- that one is pillarboxed
@@ -74,11 +86,13 @@ else
 fi
 
 # ---------------------------------------------------------------- og image
-# 1200x630 social card: hero screenshot inset on the brand forest.
-HERO="$SHOTS/ipad-light/02_plan_overview.png"
+# 1200x630 social card: the first Mac App Store image, title and all. At 1200
+# wide it is 750 tall; the crop keeps the title and runs the window off the
+# bottom edge, as the iPhone images do.
+HERO="$FRAMED/mac/01_plan_overview.png"
 if [ -f "$HERO" ]; then
   ffmpeg -y -v error -i "$HERO" \
-    -vf "scale=740:-1,pad=1200:630:430:(630-ih)/2:0x0D4234" \
+    -vf "scale=1200:-1,crop=1200:630:0:10" \
     -q:v 3 "$WEB/images/og-card.jpg"
   printf '  %-28s %s\n' "og-card.jpg" "$(du -h "$WEB/images/og-card.jpg" | cut -f1)"
 fi

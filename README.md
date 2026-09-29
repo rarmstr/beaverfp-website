@@ -25,8 +25,8 @@ beaverfp-website/
 │   └── build-assets.sh # Regenerates images/ and video/ from the bfp1 app repo
 ├── images/
 │   ├── brand/          # Logo lockups + app icon (source of truth in Advertising/Branding)
-│   ├── og-card.jpg     # 1200x630 social card (generated)
-│   └── screenshots/    # App screenshots, 1x + @2x (generated)
+│   ├── og-card.jpg     # 1200x630 social card, from App Store image 1 (generated)
+│   └── screenshots/    # App screenshots and App Store images, 1x + @2x (generated)
 ├── video/              # Demo tour cut + poster (generated)
 └── README.md           # This file
 ```
@@ -34,8 +34,10 @@ beaverfp-website/
 ## Regenerating images and video
 
 `images/screenshots/`, `images/og-card.jpg` and `video/` are all **generated** from
-the app repo — don't hand-edit them. After recapturing screenshots or re-rendering
-a video in `bfp1`, run:
+the app repo — don't hand-edit them. Screenshots come from `bfp1/Screenshots/raw/`
+(where `capture_screenshots.sh` writes them) and the App Store images from
+`bfp1/Screenshots/framed/`. After recapturing, reframing or re-rendering a video
+in `bfp1`, run:
 
 ```bash
 ./scripts/build-assets.sh ~/project/bfp1
@@ -49,6 +51,9 @@ then prints the resulting sizes. Two things it deliberately does:
   black bars on the page.
 - **Skips the landscape iPhone chart screenshots** (`04`–`06`), whose legends wrap
   one character per line at that width.
+
+It always re-encodes the video, even from an unchanged master. If the video wasn't
+re-rendered, `git checkout -- video/` afterwards.
 
 ## Deployment Instructions
 
