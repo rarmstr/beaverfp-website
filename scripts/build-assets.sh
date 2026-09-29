@@ -3,7 +3,7 @@
 #
 # Screenshots come from bfp1/Screenshots/raw/<device-appearance>/ (where
 # capture_screenshots.sh writes them), the App Store images from
-# bfp1/Screenshots/framed/, the demo video from bfp1/build/video/s03-demo-ipad/.
+# bfp1/Screenshots/framed/, the demo video from bfp1/build/video/s04-social-ipad/.
 # Re-run this after regenerating any of them; it overwrites everything it
 # produces and touches nothing else.
 #
@@ -64,7 +64,7 @@ done
 # ---------------------------------------------------------------- video
 # The 4:3 master, not the "youtube" rendition -- that one is pillarboxed
 # (1440x1080 of content inside a 1920x1080 frame) and would show black bars.
-MASTER="$APP/build/video/s03-demo-ipad/master.mp4"
+MASTER="$APP/build/video/s04-social-ipad/master.mp4"
 if [ -f "$MASTER" ]; then
   echo "Video -> $VID"
   ffmpeg -y -v error -i "$MASTER" \
@@ -72,8 +72,8 @@ if [ -f "$MASTER" ]; then
     -pix_fmt yuv420p -movflags +faststart \
     -c:a aac -b:a 96k \
     "$VID/demo-tour.mp4"
-  # Poster: the Financial Insights beat.
-  ffmpeg -y -v error -i "$MASTER" -ss 9.5 -frames:v 1 \
+  # Poster: the Financial Insights beat, between captions.
+  ffmpeg -y -v error -i "$MASTER" -ss 10.8 -frames:v 1 \
     -vf scale=1376:-2 -q:v 4 "$VID/demo-tour-poster.jpg"
   printf '  %-28s %s\n' "demo-tour.mp4" "$(du -h "$VID/demo-tour.mp4" | cut -f1)"
 else
