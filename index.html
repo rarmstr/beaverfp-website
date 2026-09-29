@@ -10,7 +10,10 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
     <link rel="canonical" href="https://beaverfp.com/">
-    <link rel="stylesheet" href="style.css">
+    <!-- Bump ?v= on style.css and script.js (here, privacy.html and terms.html)
+         with each release. Pages caches them for 4 hours but the HTML for 10
+         minutes, so without it returning visitors get new HTML with old CSS. -->
+    <link rel="stylesheet" href="style.css?v=2.5">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Beaver FP — Canadian Retirement Planning, in Minutes">
@@ -852,6 +855,6 @@
     <img class="modal-content" id="modalImage" alt="">
 </div>
 
-<script src="script.js"></script>
+<script src="script.js?v=2.5"></script>
 </body>
 </html>
