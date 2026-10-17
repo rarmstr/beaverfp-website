@@ -31,6 +31,20 @@ class CleanURLHandler(http.server.SimpleHTTPRequestHandler):
                 return local + ".html"
         return local
 
+    def send_error(self, code, message=None, explain=None):
+        # Like GitHub Pages, answer unknown paths with 404.html (still a 404).
+        page = os.path.join(ROOT, "404.html")
+        if code != 404 or not os.path.exists(page):
+            return super().send_error(code, message, explain)
+        with open(page, "rb") as f:
+            body = f.read()
+        self.send_response(404)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        if self.command != "HEAD":
+            self.wfile.write(body)
+
     def end_headers(self):
         # Disable caching so edits show up immediately on refresh.
         self.send_header("Cache-Control", "no-store, must-revalidate")

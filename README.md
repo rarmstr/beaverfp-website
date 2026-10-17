@@ -16,6 +16,7 @@ beaverfp-website/
 ├── index.html          # Homepage
 ├── privacy.html        # Privacy Policy
 ├── terms.html          # Terms of Service
+├── 404.html            # Not-found page; also forwards HeyCatch short links (/a-/z, /0-/9)
 ├── style.css           # Shared stylesheet (light + dark)
 ├── script.js           # FAQ accordion, demo video controls, screenshot lightbox
 ├── serve.py            # Local preview server (clean URLs, like GitHub Pages)

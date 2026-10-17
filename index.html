@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beaver FP is retirement planning for Canadians, and nothing else. Quick Plan lays out your whole retirement in seven short steps — CPP, OAS, TFSA, RRSP and full federal + provincial tax — then Financial Insights shows the changes worth making, each priced in today's dollars. No account, no servers, no tracking.">
+    <meta name="description" content="Beaver FP is retirement planning for Canadians, and nothing else. Quick Plan lays out your whole retirement in seven short steps — CPP, OAS, TFSA, RRSP and full federal + provincial tax — then Financial Insights shows the changes worth making, each priced in today's dollars. No account, no ads.">
     <meta name="theme-color" content="#0D4234" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0b1512" media="(prefers-color-scheme: dark)">
     <title>Beaver FP — Canadian Retirement Planning, in Minutes</title>
@@ -14,6 +14,18 @@
          with each release. Pages caches them for 4 hours but the HTML for 10
          minutes, so without it returning visitors get new HTML with old CSS. -->
     <link rel="stylesheet" href="style.css?v=2.5">
+    <!-- HeyCatch analytics. Pinned to the version on npm's `latest` dist-tag
+         (never a -dev/-beta prerelease). requestBatching is off because every
+         navigation here is a full page load, which would drop a pending batch. -->
+    <script type="module">
+        import { analytics } from 'https://esm.sh/@heycatch/sdk@0.8.3';
+
+        analytics.init({
+            projectKey: 'hck_pk_d8FYfxZb_djxFPNjbZvOiR36pex7quyL',
+            install: { framework: 'web', agent: 'claude-code' },
+            requestBatching: false,
+        });
+    </script>
 
     <!-- Open Graph -->
     <meta property="og:title" content="Beaver FP — Canadian Retirement Planning, in Minutes">
@@ -84,7 +96,7 @@
         {
           "@type": "Question",
           "name": "Is my data secure?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Your financial data is stored on your device and, with a subscription, syncs to your other Apple devices through the private database of your own iCloud account. There are no Beaver FP servers, no accounts and no data collection, so we have no way to see your plan. Syncing comes with every subscription — sync is then on by default when you are signed in to iCloud, and you can turn it off." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Your financial data is stored on your device and, with a subscription, syncs to your other Apple devices through the private database of your own iCloud account. There are no Beaver FP servers and no accounts, so we have no way to see your plan. The app sends usage analytics, which never include it. Syncing comes with every subscription — sync is then on by default when you are signed in to iCloud, and you can turn it off." }
         },
         {
           "@type": "Question",
@@ -186,7 +198,7 @@
                     </li>
                     <li>
                         <svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>
-                        No account, no tracking. Your plan stays on your devices and in your own iCloud.
+                        No account, no ads. Your plan stays on your devices and in your own iCloud.
                     </li>
                 </ul>
             </div>
@@ -614,7 +626,7 @@
                 <h2>Your finances stay yours</h2>
                 <ul class="privacy-points">
                     <li>No account to create</li>
-                    <li>No analytics or ads</li>
+                    <li>No ads</li>
                     <li>Works offline</li>
                     <li>Your devices, your own iCloud</li>
                 </ul>
@@ -622,6 +634,7 @@
                     There is no Beaver FP server. Your plan is stored on your device and, with a
                     subscription, syncs to your other Apple devices through the private database of your
                     own iCloud account. We never see it, because there is nowhere for it to reach us.
+                    The app does send usage analytics, which never include your plan.
                     Prefer it stayed on one device? Turn sync off.
                 </p>
                 <a href="/privacy" class="text-link">Read the privacy policy →</a>
@@ -707,7 +720,7 @@
                     <button type="button" class="shot-button">
                         <img src="images/screenshots/store-10-privacy.jpg" srcset="images/screenshots/store-10-privacy.jpg 360w, images/screenshots/store-10-privacy@2x.jpg 720w" data-full="images/screenshots/store-10-privacy@2x.jpg"
                              sizes="(max-width: 620px) 64vw, 250px"
-                             alt="Private by design. No servers. Your plans stay on your devices and in your iCloud. The Privacy &amp; Security screen, beside five points: no account to create, nothing is tracked, your data stays yours, works offline, export any time." loading="lazy" width="360" height="782">
+                             alt="Private by design. Your plans stay on your devices and in your iCloud. The Privacy &amp; Security screen, beside five points: no account to create, no advertising, your data stays yours, works offline, export any time." loading="lazy" width="360" height="782">
                     </button>
                 </li>
         </ul>
@@ -770,7 +783,7 @@
                         <span class="faq-icon" aria-hidden="true">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Your financial data is stored on your device and, with a subscription, syncs to your other Apple devices through the private database of your own iCloud account — your storage, under your Apple Account, which Apple doesn&rsquo;t let developers read. There are no Beaver FP servers, no accounts and no data collection, so we never see your information. Syncing comes with every subscription — sync is then on by default when you&rsquo;re signed in to iCloud; turn it off and Beaver FP stays local to the device you&rsquo;re on.</p>
+                        <p>Your financial data is stored on your device and, with a subscription, syncs to your other Apple devices through the private database of your own iCloud account — your storage, under your Apple Account, which Apple doesn&rsquo;t let developers read. There are no Beaver FP servers and no accounts, so we never see your plan. The app sends usage analytics, which never include it. Syncing comes with every subscription — sync is then on by default when you&rsquo;re signed in to iCloud; turn it off and Beaver FP stays local to the device you&rsquo;re on.</p>
                     </div>
                 </div>
                 <div class="faq-item">

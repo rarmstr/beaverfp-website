@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for Beaver FP - Your financial data lives on your device and can sync through your own iCloud account. No Beaver FP servers, no accounts, no tracking.">
+    <meta name="description" content="Privacy Policy for Beaver FP - Your financial data lives on your device and can sync through your own iCloud account. No Beaver FP servers, no accounts, no advertising.">
     <title>Privacy Policy - Beaver FP</title>
     <meta name="theme-color" content="#0D4234" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0b1512" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="canonical" href="https://beaverfp.com/privacy">
     <link rel="stylesheet" href="style.css?v=2.5">
+    <!-- HeyCatch analytics. Pinned to the version on npm's `latest` dist-tag
+         (never a -dev/-beta prerelease). requestBatching is off because every
+         navigation here is a full page load, which would drop a pending batch. -->
+    <script type="module">
+        import { analytics } from 'https://esm.sh/@heycatch/sdk@0.8.3';
+
+        analytics.init({
+            projectKey: 'hck_pk_d8FYfxZb_djxFPNjbZvOiR36pex7quyL',
+            install: { framework: 'web', agent: 'claude-code' },
+            requestBatching: false,
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -31,21 +43,30 @@
     <main>
         <div class="legal-page">
             <h1>Privacy Policy</h1>
-            <p class="last-updated">Last Updated: August 13, 2026</p>
+            <p class="last-updated">Last Updated: October 17, 2026</p>
 
             <div class="highlight-box">
                 <h2>Your Privacy is Our Priority</h2>
-                <p><strong>Your financial data stays yours.</strong> Beaver FP has no servers, no accounts and no analytics. Your plan is stored on your device and, with a subscription, syncs to your other Apple devices through your own iCloud account - we never see it, and we have no way to.</p>
+                <p><strong>Your financial data stays yours.</strong> Beaver FP has no servers and no accounts. Your plan is stored on your device and, with a subscription, syncs to your other Apple devices through your own iCloud account - we never see it, and we have no way to. The app does send usage analytics, which never include your plan; section 1 says exactly what they contain.</p>
             </div>
 
             <h2>1. Information Collection and Storage</h2>
             <p>Beaver FP operates on a fundamentally different model than most apps:</p>
             <ul>
-                <li><strong>No Data Collection:</strong> We do not collect, store, or transmit any personal or financial information. There is no Beaver FP account to create and no back end to send your data to.</li>
+                <li><strong>Your Plan Is Never Collected:</strong> We do not collect, store, or transmit your plans, or any personal or financial information you enter. There is no Beaver FP account to create and no back end to send your plan to.</li>
                 <li><strong>Stored on Your Device:</strong> Your financial plans, personal information, and calculations are stored on your device.</li>
                 <li><strong>Synced Through Your Own iCloud:</strong> With a subscription and an iCloud account, your plan also syncs to your other Apple devices using Apple's CloudKit, in the <strong>private database of your own Apple Account</strong>. It is your iCloud storage, under your Apple Account - see section 3.</li>
                 <li><strong>No Beaver FP Servers:</strong> We do not operate servers or databases. Your data never passes through infrastructure we control, and we cannot access, view, or recover it.</li>
-                <li><strong>No Analytics:</strong> We do not use analytics, telemetry, or tracking of any kind.</li>
+                <li><strong>Usage Analytics:</strong> To learn which parts of the app are used, the app sends usage events to HeyCatch, Inc., an analytics service in the United States, which stores them with PostHog's US cloud. The events contain:
+                    <ul>
+                        <li>which screens you open, when the app opens and closes, whether you finish Quick Plan or the guided tour, and which subscription you buy and whether it began with the free trial</li>
+                        <li>your device's model, operating system, app version, screen size, language, time zone, and whether it is on Wi-Fi or cellular</li>
+                        <li>a random ID that the app creates when it is installed, so events from the same device can be counted together</li>
+                        <li>your internet (IP) address, which reaches HeyCatch with every request. HeyCatch uses it to look up your approximate city and country.</li>
+                    </ul>
+                    The events never contain your plans, any amount, age or name you enter, your email, or your Apple Account. The random ID is not connected to any of those, and we do not try to connect it. The data is not sold, not used for advertising, and not shared with data brokers. HeyCatch keeps it while Beaver FP uses its service, and for two months after.</li>
+                <li><strong>Website Analytics:</strong> beaverfp.com also uses HeyCatch. When you visit, it records the pages you view, how far you scroll, the links and buttons you click, the site or campaign link that sent you, your browser, device type and screen size, and your IP address, from which HeyCatch looks up your approximate city and country. It stores a random ID in a cookie and in your browser's local storage for up to a year, so a later visit from the same browser counts as the same visitor. It does not record what you type, and it is not used for advertising. Deleting this site's cookies and data in your browser removes the ID.</li>
+                <li><strong>No Advertising or Tracking:</strong> We do not use advertising, and we do not link app or website data with data from other companies' apps or websites.</li>
             </ul>
 
             <h2>2. How Your Data is Protected</h2>
@@ -53,7 +74,7 @@
             <h3>On-Device Architecture</h3>
             <p>Your data is stored using Apple's secure storage systems on your device, and synced only through Apple's iCloud. This architecture protects your privacy because:</p>
             <ul>
-                <li><strong>Nothing for Us to Breach:</strong> There is no Beaver FP database to attack, because we hold no copy of your data. We cannot lose what we never have.</li>
+                <li><strong>Nothing for Us to Breach:</strong> There is no Beaver FP database to attack, because we hold no copy of your plan. We cannot lose what we never have.</li>
                 <li><strong>No Third Parties:</strong> Your plan travels between your own devices and your own iCloud account, and nowhere else. It is never sold, shared, or handed to an advertiser, data broker, or analytics provider.</li>
                 <li><strong>Complete Control:</strong> You decide whether to sync at all, and when to delete or export your data.</li>
                 <li><strong>Works Offline:</strong> No internet connection is required to build or view your financial plans. If you are offline, your device catches up the next time it connects.</li>
@@ -91,13 +112,14 @@
             </ul>
 
             <h2>5. Third-Party Services</h2>
-            <p>Beaver FP integrates with the following Apple services:</p>
+            <p>Beaver FP uses the following services:</p>
             <ul>
                 <li><strong>iCloud / CloudKit:</strong> For syncing your plan between your own devices, in your own Apple Account, as described in section 3. Subject to Apple's Privacy Policy.</li>
                 <li><strong>Apple App Store:</strong> For app distribution and updates. Subject to Apple's Privacy Policy.</li>
                 <li><strong>StoreKit (In-App Purchases):</strong> For subscription management. Apple processes all payment information. We never see your credit card or payment details.</li>
+                <li><strong>HeyCatch (Usage Analytics):</strong> Receives the usage events described in section 1, from the app and from this website, and stores them with PostHog in the United States. Subject to HeyCatch's privacy policy at <a href="https://heycatch.ai/privacy" target="_blank" rel="noopener">heycatch.ai/privacy</a>.</li>
             </ul>
-            <p>We do not integrate with any third-party analytics, advertising, or tracking services.</p>
+            <p>We do not use any advertising or tracking services, and we share no data with data brokers.</p>
 
             <h2>6. Your Data Rights</h2>
             <p>You have complete control over your data:</p>
@@ -106,11 +128,12 @@
                 <li><strong>Right to Export:</strong> You can export your plans in standard formats for portability.</li>
                 <li><strong>Right to Privacy:</strong> We never ask for unnecessary permissions or data.</li>
                 <li><strong>Right to Choose:</strong> Sync is a feature, not a requirement. Turn it off and Beaver FP is a local-only app again.</li>
-                <li><strong>Right to Transparency:</strong> When the way Beaver FP handles your data changes - as it did when iCloud sync arrived in version 2.1 - we update this policy and say what changed. What will not change is that we hold no copy of your data and have no way to see it.</li>
+                <li><strong>Right to Transparency:</strong> When the way Beaver FP handles data changes, as it did when iCloud sync arrived in version 2.1 and usage analytics arrived in version 2.6, we update this policy and say what changed. What will not change is that we hold no copy of your plan and have no way to see it.</li>
+                <li><strong>Usage Analytics:</strong> The app has no setting to turn usage analytics off; deleting the app stops them. For questions, email <a href="mailto:support@beaverfp.com">support@beaverfp.com</a>. The random ID is not shown in the app and is not connected to you, so we cannot pick out one person's events; we can tell you what the events contain.</li>
             </ul>
 
             <h2>7. Children's Privacy</h2>
-            <p>Beaver FP is not directed to children under 13. We do not knowingly collect any information from children - we collect no information from anyone. Because data is stored on the device and in the account holder's own iCloud, parents retain complete control over their child's use of the app.</p>
+            <p>Beaver FP is not directed to children under 13. We do not knowingly collect any information from children. The only data the app sends is the usage analytics in section 1, which contain no names, contact details or plan information. Because plans are stored on the device and in the account holder's own iCloud, parents retain complete control over their child's use of the app.</p>
 
             <h2>8. Changes to This Privacy Policy</h2>
             <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by:</p>
@@ -119,11 +142,12 @@
                 <li>Updating the "Last Updated" date</li>
                 <li>Providing notice within the app if changes are material</li>
             </ul>
+            <p><strong>October 17, 2026:</strong> Updated for Beaver FP 2.6, which sends usage analytics to HeyCatch, and for the analytics on this website. Earlier versions of this policy said Beaver FP used no analytics, which is no longer accurate. Your plan is still never sent to us. Sections 1, 2, 5, 6, 7 and 9 changed.</p>
             <p><strong>August 13, 2026:</strong> Updated for Beaver FP 2.1, which added iCloud sync between your own devices. Earlier versions of this policy described the app as local-only, which is no longer accurate by default. Sections 1, 2, 3 and 9 changed.</p>
             <p>Your continued use of Beaver FP after changes constitutes acceptance of the updated policy.</p>
 
             <h2>9. International Users</h2>
-            <p>We transfer no data internationally, because we receive no data at all.</p>
+            <p>Your plan is never transferred to us. The usage analytics described in section 1 are processed and stored in the United States by HeyCatch and PostHog, so they leave Canada.</p>
             <p>If iCloud sync is on, your plan is stored in your own iCloud account on Apple's infrastructure. Apple operates that infrastructure globally, so data associated with your Apple Account may be stored or processed outside your own country, including outside Canada. That storage is governed by your agreement with Apple, not by us. If you would rather your plan never leave your device, turn sync off in Beaver FP's settings.</p>
 
             <h2>10. Data Security Best Practices</h2>
