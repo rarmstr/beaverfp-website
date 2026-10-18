@@ -23,9 +23,12 @@ mkdir -p "$OUT" "$VID"
 
 # JPEG quality. Screenshots are flat UI, so this is generous; verify with `du`.
 Q=80
+# AVIF quality. About a third of the JPEG's size with no visible difference.
+# index.html serves these through <picture>, with the JPEGs as the fallback.
+QA=70
 
 # resize <src> <dest-basename> <2x-width>
-#   emits <dest>.jpg (1x) and <dest>@2x.jpg
+#   emits <dest>.jpg (1x) and <dest>@2x.jpg, and the same pair as .avif
 resize() {
   local src="$1" name="$2" w2x="$3"
   local w1x=$(( w2x / 2 ))
@@ -34,6 +37,10 @@ resize() {
        "$src" --out "$OUT/${name}@2x.jpg" >/dev/null
   sips -s format jpeg -s formatOptions "$Q" --resampleWidth "$w1x" \
        "$src" --out "$OUT/${name}.jpg" >/dev/null
+  sips -s format avif -s formatOptions "$QA" --resampleWidth "$w2x" \
+       "$src" --out "$OUT/${name}@2x.avif" >/dev/null
+  sips -s format avif -s formatOptions "$QA" --resampleWidth "$w1x" \
+       "$src" --out "$OUT/${name}.avif" >/dev/null
   printf '  %-28s %sw + %sw\n' "$name" "$w1x" "$w2x"
 }
 
