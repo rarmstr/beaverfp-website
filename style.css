@@ -711,6 +711,7 @@ nav a:hover { color: var(--accent); }
 }
 .faq-item.active .faq-answer { max-height: 480px; padding: 0 1.35rem 1.35rem; }
 .faq-answer p { color: var(--text-muted); }
+.faq-answer p + p { margin-top: 0.75rem; }
 
 /* ---------- CTA ---------- */
 .cta-section {
@@ -772,6 +773,22 @@ footer {
 .legal-page li { margin-bottom: 0.5rem; line-height: 1.8; }
 .legal-page strong { color: var(--heading); }
 .legal-page a { color: var(--accent); }
+
+/* About page: portrait beside the text, stacked above it on a phone. */
+.about-person { display: flex; gap: 1.5rem; align-items: flex-start; }
+.about-portrait { flex: none; width: 140px; }
+.about-portrait img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
+  outline: 1px solid var(--border);
+  outline-offset: -1px;
+}
+.about-portrait figcaption { margin-top: 0.6rem; font-size: 0.85rem; color: var(--text-muted); text-align: center; }
+.about-person-text { flex: 1; min-width: 0; }
+.about-quote { border-left: 3px solid var(--gold); padding-left: 1rem; }
+.about-quote p { margin-bottom: 0; font-style: italic; color: var(--text-muted); }
 
 .highlight-box {
   background: var(--surface-alt);
@@ -842,6 +859,8 @@ footer {
 }
 
 @media (max-width: 620px) {
+  .about-person { flex-direction: column; }
+  .about-portrait { align-self: center; }
   header { padding: 0.6rem 1rem; }
   .header-content { flex-direction: column; gap: 0.5rem; }
   .logo-image { height: 34px; }

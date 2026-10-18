@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Who builds Beaver FP, the retirement planning app for Canadians on iPhone, iPad and Mac, what it is built around, and how to get in touch.">
+    <title>About Beaver FP</title>
+    <meta name="theme-color" content="#0D4234" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b1512" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="canonical" href="https://beaverfp.com/about">
+    <link rel="stylesheet" href="style.css?v=2.5.1">
+    <!-- HeyCatch analytics. Pinned to the version on npm's `latest` dist-tag
+         (never a -dev/-beta prerelease). requestBatching is off because every
+         navigation here is a full page load, which would drop a pending batch. -->
+    <script type="module">
+        import { analytics } from 'https://esm.sh/@heycatch/sdk@0.8.3';
+
+        analytics.init({
+            projectKey: 'hck_pk_d8FYfxZb_djxFPNjbZvOiR36pex7quyL',
+            install: { framework: 'web', agent: 'claude-code' },
+            requestBatching: false,
+        });
+    </script>
+    <!-- Organization: the same block as index.html; keep them in step. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://beaverfp.com/#organization",
+      "name": "Beaver FP",
+      "url": "https://beaverfp.com/",
+      "logo": "https://beaverfp.com/images/brand/icon-1024.png",
+      "email": "support@beaverfp.com",
+      "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "support@beaverfp.com", "url": "https://beaverfp.com/contact" },
+      "founder": { "@type": "Person", "name": "Rob Armstrong" },
+      "address": { "@type": "PostalAddress", "addressLocality": "St. Albert", "addressRegion": "AB", "addressCountry": "CA" },
+      "sameAs": [
+        "https://apps.apple.com/ca/app/beaver-fp/id6751347553",
+        "https://apps.apple.com/ca/developer/robert-armstrong/id1834728992"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo" aria-label="Beaver FP home">
+                <picture>
+                    <source srcset="images/brand/lockup-on-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    <source srcset="images/brand/lockup-on-dark.png" media="(prefers-color-scheme: dark)">
+                    <source srcset="images/brand/lockup-on-light.webp" type="image/webp">
+                    <img src="images/brand/lockup-on-light.png" alt="Beaver FP" class="logo-image" width="160" height="40">
+                </picture>
+            </a>
+            <nav aria-label="Primary">
+                <a href="/">Home</a>
+                <a href="/privacy">Privacy</a>
+                <a href="/terms">Terms</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="legal-page">
+            <h1>About Beaver FP</h1>
+            <p>Beaver FP is a retirement planning app for Canadians, on iPhone, iPad and Mac. It lays out your retirement year by year — CPP, OAS, GIS, TFSA, RRSP and federal and provincial tax — and shows which changes are worth making, each priced in today's dollars.</p>
+
+            <h2>Who builds it</h2>
+            <!-- The portrait is the app's AboutMePortrait asset (bfp1), with the app's caption. -->
+            <div class="about-person">
+                <figure class="about-portrait">
+                    <picture>
+                        <source type="image/avif" srcset="images/rob-armstrong.avif 140w, images/rob-armstrong@2x.avif 280w" sizes="140px">
+                        <img src="images/rob-armstrong.jpg"
+                             srcset="images/rob-armstrong.jpg 140w, images/rob-armstrong@2x.jpg 280w"
+                             sizes="140px" alt="Rob Armstrong" width="140" height="200">
+                    </picture>
+                    <figcaption>Rob, Creator of Beaver FP</figcaption>
+                </figure>
+                <div class="about-person-text">
+                    <p>Beaver FP is built by Rob Armstrong, an independent developer in St. Albert, Alberta, who has been working on it since 2024. On the App Store it is published under Rob's full name, Robert Armstrong.</p>
+                    <!-- From "Get in Touch" in the app's About screen (AboutMeView.swift). -->
+                    <blockquote class="about-quote">
+                        <p>&ldquo;Every feature in this app started as a user suggestion or a personal need I discovered while planning my own retirement.&rdquo;</p>
+                    </blockquote>
+                </div>
+            </div>
+
+            <h2>What it's built around</h2>
+            <ul>
+                <li><strong>Retirement planning, and nothing else.</strong> No bank logins, no transactions to sort, no budgets to track.</li>
+                <li><strong>Canadian rules.</strong> CPP, OAS with clawback, GIS, every registered account, and federal and provincial tax for every province and territory.</li>
+                <li><strong>Your plan stays yours.</strong> There are no Beaver FP servers and no accounts. Your plan is stored on your devices and, with a subscription, in your own iCloud.</li>
+                <li><strong>Nothing is hidden.</strong> Tap any number for the arithmetic behind it, and override any value in any year.</li>
+                <li><strong>A planning tool, not advice.</strong> Beaver FP complements your financial advisor; it doesn't replace one.</li>
+            </ul>
+
+            <h2 id="contact">Contact</h2>
+            <p>Email <a href="mailto:support@beaverfp.com">support@beaverfp.com</a> with questions, feedback or a problem. We usually reply within 24 hours.</p>
+            <p>The <a href="/contact">contact page</a> covers problem reports, subscriptions and refunds.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section footer-brand">
+                <picture>
+                    <source srcset="images/brand/lockup-on-dark.webp" type="image/webp">
+                    <img src="images/brand/lockup-on-dark.png" alt="Beaver FP" class="footer-logo">
+                </picture>
+                <p>Canadian retirement planning, and nothing else. Designed with your privacy in mind.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="/about">About Beaver FP</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li>Email: <a href="mailto:support@beaverfp.com">support@beaverfp.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rob Armstrong - All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

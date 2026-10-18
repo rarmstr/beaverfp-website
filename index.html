@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beaver FP is retirement planning for Canadians, and nothing else. Quick Plan lays out your whole retirement in seven short steps — CPP, OAS, TFSA, RRSP and full federal + provincial tax — then Financial Insights shows the changes worth making, each priced in today's dollars. No account, no ads.">
+    <meta name="description" content="An iPhone, iPad and Mac app that lays out your Canadian retirement year by year, with CPP, OAS, TFSA, RRSP and tax, then prices the changes worth making.">
     <meta name="theme-color" content="#0D4234" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0b1512" media="(prefers-color-scheme: dark)">
     <title>Beaver FP — Canadian Retirement Planning, in Minutes</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
     <link rel="canonical" href="https://beaverfp.com/">
-    <!-- Bump ?v= on style.css and script.js (here, privacy.html and terms.html)
-         with each release. Pages caches them for 4 hours but the HTML for 10
-         minutes, so without it returning visitors get new HTML with old CSS. -->
-    <link rel="stylesheet" href="style.css?v=2.5">
+    <!-- Bump ?v= on style.css and script.js (here, and style.css in every other
+         page) with each release. Pages caches them for 4 hours but the HTML for
+         10 minutes, so without it returning visitors get new HTML with old CSS. -->
+    <link rel="stylesheet" href="style.css?v=2.5.1">
     <!-- HeyCatch analytics. Pinned to the version on npm's `latest` dist-tag
          (never a -dev/-beta prerelease). requestBatching is off because every
          navigation here is a full page load, which would drop a pending batch. -->
@@ -54,6 +54,7 @@
         "description": "Quick Plan is free for up to two plans, with the year-by-year projection, every chart and the Financial Insights findings visible. A monthly subscription, with a one-week free trial, unlocks editing every detail, PDF reports and iCloud sync. Stress testing and applying an opportunity in one tap come with the annual or lifetime tier."
       },
       "author": { "@type": "Person", "name": "Rob Armstrong" },
+      "publisher": { "@id": "https://beaverfp.com/#organization" },
       "featureList": [
         "Quick Plan: a whole retirement plan in seven short steps",
         "Year-by-year retirement projections",
@@ -65,6 +66,26 @@
         "Monte Carlo stress testing and historical market crashes",
         "Eleven charts including OAS clawback, tax mix and contribution room",
         "Professional PDF reports"
+      ]
+    }
+    </script>
+    <!-- Organization: the same block goes on every page. sameAs lists only
+         profiles Beaver FP owns; add new ones here and on the other pages. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://beaverfp.com/#organization",
+      "name": "Beaver FP",
+      "url": "https://beaverfp.com/",
+      "logo": "https://beaverfp.com/images/brand/icon-1024.png",
+      "email": "support@beaverfp.com",
+      "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "support@beaverfp.com", "url": "https://beaverfp.com/contact" },
+      "founder": { "@type": "Person", "name": "Rob Armstrong" },
+      "address": { "@type": "PostalAddress", "addressLocality": "St. Albert", "addressRegion": "AB", "addressCountry": "CA" },
+      "sameAs": [
+        "https://apps.apple.com/ca/app/beaver-fp/id6751347553",
+        "https://apps.apple.com/ca/developer/robert-armstrong/id1834728992"
       ]
     }
     </script>
@@ -158,7 +179,9 @@
     <div class="header-content">
         <a href="/" class="logo" aria-label="Beaver FP home">
             <picture>
+                <source srcset="images/brand/lockup-on-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
                 <source srcset="images/brand/lockup-on-dark.png" media="(prefers-color-scheme: dark)">
+                <source srcset="images/brand/lockup-on-light.webp" type="image/webp">
                 <img src="images/brand/lockup-on-light.png" alt="Beaver FP" class="logo-image" width="160" height="40">
             </picture>
         </a>
@@ -203,11 +226,14 @@
                 </ul>
             </div>
             <div class="hero-device">
-                <img src="images/screenshots/overview-ipad-light.jpg"
-                     srcset="images/screenshots/overview-ipad-light.jpg 900w, images/screenshots/overview-ipad-light@2x.jpg 1800w"
-                     sizes="(max-width: 860px) 92vw, 46vw"
-                     alt="Beaver FP plan overview on iPad showing the Financial Insights banner, plan goal and estate value, above Money Flows, Timeline and Steps tabs with a money-flow diagram"
-                     class="hero-screenshot" width="900" height="675" fetchpriority="high">
+                <picture>
+                    <source type="image/avif" srcset="images/screenshots/overview-ipad-light.avif 900w, images/screenshots/overview-ipad-light@2x.avif 1800w" sizes="(max-width: 860px) 92vw, 46vw">
+                    <img src="images/screenshots/overview-ipad-light.jpg"
+                         srcset="images/screenshots/overview-ipad-light.jpg 900w, images/screenshots/overview-ipad-light@2x.jpg 1800w"
+                         sizes="(max-width: 860px) 92vw, 46vw"
+                         alt="Beaver FP plan overview on iPad showing the Financial Insights banner, plan goal and estate value, above Money Flows, Timeline and Steps tabs with a money-flow diagram"
+                         class="hero-screenshot" width="900" height="675" fetchpriority="high">
+                </picture>
             </div>
         </div>
     </section>
@@ -245,11 +271,14 @@
                     <p class="fineprint">Quick Plan is free, for up to two plans.</p>
                 </div>
                 <figure class="device-shot quickplan-visual">
-                    <img src="images/screenshots/quickplan-iphone-light.jpg"
-                         srcset="images/screenshots/quickplan-iphone-light.jpg 320w, images/screenshots/quickplan-iphone-light@2x.jpg 640w"
-                         sizes="(max-width: 900px) min(280px, 72vw), 300px"
-                         alt="The Quick Plan summary on iPhone: born 1986 in Alberta, retiring at 65, $90,000 a year of employment income, $500 a month of contributions, spending of $2,500 a month now and $2,000 in retirement, and $1,500 a month of rent, with a Create Plan button"
-                         loading="lazy" width="320" height="695">
+                    <picture>
+                        <source type="image/avif" srcset="images/screenshots/quickplan-iphone-light.avif 320w, images/screenshots/quickplan-iphone-light@2x.avif 640w" sizes="(max-width: 900px) min(280px, 72vw), 300px">
+                        <img src="images/screenshots/quickplan-iphone-light.jpg"
+                             srcset="images/screenshots/quickplan-iphone-light.jpg 320w, images/screenshots/quickplan-iphone-light@2x.jpg 640w"
+                             sizes="(max-width: 900px) min(280px, 72vw), 300px"
+                             alt="The Quick Plan summary on iPhone: born 1986 in Alberta, retiring at 65, $90,000 a year of employment income, $500 a month of contributions, spending of $2,500 a month now and $2,000 in retirement, and $1,500 a month of rent, with a Create Plan button"
+                             loading="lazy" width="320" height="695">
+                    </picture>
                     <figcaption>Step 7 of 7: the whole plan on one screen.</figcaption>
                 </figure>
             </div>
@@ -276,11 +305,19 @@
                 <div class="insights-visual">
                     <figure class="device-shot">
                         <picture>
-                            <!-- The iPad shot is unreadable at phone width; show the iPhone capture instead. -->
+                            <!-- The iPad shot is unreadable at phone width; show the iPhone capture instead.
+                                 Each size comes as AVIF first, with the JPEG as the fallback. -->
+                            <source type="image/avif" media="(max-width: 720px)"
+                                    srcset="images/screenshots/insights-iphone-dark.avif 320w, images/screenshots/insights-iphone-dark@2x.avif 640w"
+                                    sizes="min(340px, 88vw)"
+                                    width="320" height="695">
                             <source media="(max-width: 720px)"
                                     srcset="images/screenshots/insights-iphone-dark.jpg 320w, images/screenshots/insights-iphone-dark@2x.jpg 640w"
                                     sizes="min(340px, 88vw)"
                                     width="320" height="695">
+                            <source type="image/avif"
+                                    srcset="images/screenshots/insights-ipad-dark.avif 900w, images/screenshots/insights-ipad-dark@2x.avif 1800w"
+                                    sizes="(max-width: 900px) 92vw, 52vw">
                             <img src="images/screenshots/insights-ipad-dark.jpg"
                                  srcset="images/screenshots/insights-ipad-dark.jpg 900w, images/screenshots/insights-ipad-dark@2x.jpg 1800w"
                                  sizes="(max-width: 900px) 92vw, 52vw"
@@ -441,11 +478,14 @@
 
             <div class="split">
                 <figure class="device-shot">
-                    <img src="images/screenshots/charts-ipad-dark.jpg"
-                         srcset="images/screenshots/charts-ipad-dark.jpg 900w, images/screenshots/charts-ipad-dark@2x.jpg 1800w"
-                         sizes="(max-width: 900px) 92vw, 52vw"
-                         alt="Net worth chart on iPad with a chart sidebar and a detail column breaking a selected year into RRSP, spousal RRSP, DCPP, TFSA and cash"
-                         loading="lazy" width="900" height="675">
+                    <picture>
+                        <source type="image/avif" srcset="images/screenshots/charts-ipad-dark.avif 900w, images/screenshots/charts-ipad-dark@2x.avif 1800w" sizes="(max-width: 900px) 92vw, 52vw">
+                        <img src="images/screenshots/charts-ipad-dark.jpg"
+                             srcset="images/screenshots/charts-ipad-dark.jpg 900w, images/screenshots/charts-ipad-dark@2x.jpg 1800w"
+                             sizes="(max-width: 900px) 92vw, 52vw"
+                             alt="Net worth chart on iPad with a chart sidebar and a detail column breaking a selected year into RRSP, spousal RRSP, DCPP, TFSA and cash"
+                             loading="lazy" width="900" height="675">
+                    </picture>
                 </figure>
                 <div class="split-copy">
                     <ul class="chip-list">
@@ -486,11 +526,14 @@
 
             <div class="split split-reverse">
                 <figure class="device-shot">
-                    <img src="images/screenshots/stress-ipad-dark.jpg"
-                         srcset="images/screenshots/stress-ipad-dark.jpg 900w, images/screenshots/stress-ipad-dark@2x.jpg 1800w"
-                         sizes="(max-width: 900px) 92vw, 52vw"
-                         alt="Monte Carlo stress test results showing the share of simulated lifetimes that end with money to spare, with median, middle-50% band, and best and worst 5% outcome lines"
-                         loading="lazy" width="900" height="675">
+                    <picture>
+                        <source type="image/avif" srcset="images/screenshots/stress-ipad-dark.avif 900w, images/screenshots/stress-ipad-dark@2x.avif 1800w" sizes="(max-width: 900px) 92vw, 52vw">
+                        <img src="images/screenshots/stress-ipad-dark.jpg"
+                             srcset="images/screenshots/stress-ipad-dark.jpg 900w, images/screenshots/stress-ipad-dark@2x.jpg 1800w"
+                             sizes="(max-width: 900px) 92vw, 52vw"
+                             alt="Monte Carlo stress test results showing the share of simulated lifetimes that end with money to spare, with median, middle-50% band, and best and worst 5% outcome lines"
+                             loading="lazy" width="900" height="675">
+                    </picture>
                 </figure>
                 <div class="split-copy">
                     <ul class="tick-list">
@@ -594,24 +637,33 @@
             </div>
             <div class="devices-grid">
                 <figure class="device-tile">
-                    <img src="images/screenshots/overview-iphone-light.jpg"
-                         srcset="images/screenshots/overview-iphone-light.jpg 320w, images/screenshots/overview-iphone-light@2x.jpg 640w"
-                         sizes="(max-width: 700px) 60vw, 240px"
-                         alt="Beaver FP plan overview on iPhone" loading="lazy" width="320" height="695" class="shot-phone">
+                    <picture>
+                        <source type="image/avif" srcset="images/screenshots/overview-iphone-light.avif 320w, images/screenshots/overview-iphone-light@2x.avif 640w" sizes="(max-width: 700px) 60vw, 240px">
+                        <img src="images/screenshots/overview-iphone-light.jpg"
+                             srcset="images/screenshots/overview-iphone-light.jpg 320w, images/screenshots/overview-iphone-light@2x.jpg 640w"
+                             sizes="(max-width: 700px) 60vw, 240px"
+                             alt="Beaver FP plan overview on iPhone" loading="lazy" width="320" height="695" class="shot-phone">
+                    </picture>
                     <figcaption>iPhone</figcaption>
                 </figure>
                 <figure class="device-tile">
-                    <img src="images/screenshots/charts-ipad-dark.jpg"
-                         srcset="images/screenshots/charts-ipad-dark.jpg 900w, images/screenshots/charts-ipad-dark@2x.jpg 1800w"
-                         sizes="(max-width: 700px) 92vw, 44vw"
-                         alt="Beaver FP charts on iPad with sidebar and detail column" loading="lazy" width="900" height="675">
+                    <picture>
+                        <source type="image/avif" srcset="images/screenshots/charts-ipad-dark.avif 900w, images/screenshots/charts-ipad-dark@2x.avif 1800w" sizes="(max-width: 700px) 92vw, 44vw">
+                        <img src="images/screenshots/charts-ipad-dark.jpg"
+                             srcset="images/screenshots/charts-ipad-dark.jpg 900w, images/screenshots/charts-ipad-dark@2x.jpg 1800w"
+                             sizes="(max-width: 700px) 92vw, 44vw"
+                             alt="Beaver FP charts on iPad with sidebar and detail column" loading="lazy" width="900" height="675">
+                    </picture>
                     <figcaption>iPad</figcaption>
                 </figure>
                 <figure class="device-tile">
-                    <img src="images/screenshots/overview-mac.jpg"
-                         srcset="images/screenshots/overview-mac.jpg 900w, images/screenshots/overview-mac@2x.jpg 1800w"
-                         sizes="(max-width: 700px) 92vw, 44vw"
-                         alt="Beaver FP plan overview on Mac" loading="lazy" width="900" height="563">
+                    <picture>
+                        <source type="image/avif" srcset="images/screenshots/overview-mac.avif 900w, images/screenshots/overview-mac@2x.avif 1800w" sizes="(max-width: 700px) 92vw, 44vw">
+                        <img src="images/screenshots/overview-mac.jpg"
+                             srcset="images/screenshots/overview-mac.jpg 900w, images/screenshots/overview-mac@2x.jpg 1800w"
+                             sizes="(max-width: 700px) 92vw, 44vw"
+                             alt="Beaver FP plan overview on Mac" loading="lazy" width="900" height="563">
+                    </picture>
                     <figcaption>Mac</figcaption>
                 </figure>
             </div>
@@ -634,6 +686,8 @@
                     There is no Beaver FP server. Your plan is stored on your device and, with a
                     subscription, syncs to your other Apple devices through the private database of your
                     own iCloud account. We never see it, because there is nowhere for it to reach us.
+                </p>
+                <p>
                     The app does send usage analytics, which never include your plan.
                     Prefer it stayed on one device? Turn sync off.
                 </p>
@@ -655,72 +709,102 @@
         <ul class="store-strip" id="storeStrip" aria-label="App screens">
                 <li>
                     <button type="button" class="shot-button">
-                        <img src="images/screenshots/store-01-plan-overview.jpg" srcset="images/screenshots/store-01-plan-overview.jpg 360w, images/screenshots/store-01-plan-overview@2x.jpg 720w" data-full="images/screenshots/store-01-plan-overview@2x.jpg"
-                             sizes="(max-width: 620px) 64vw, 250px"
-                             alt="Retirement planning. Nothing else. No bank logins, no transactions to sort, no budgets to track. The Plan Overview on iPhone." loading="lazy" width="360" height="782">
+                        <picture>
+                            <source type="image/avif" srcset="images/screenshots/store-01-plan-overview.avif 360w, images/screenshots/store-01-plan-overview@2x.avif 720w" sizes="(max-width: 620px) 64vw, 250px">
+                            <img src="images/screenshots/store-01-plan-overview.jpg" srcset="images/screenshots/store-01-plan-overview.jpg 360w, images/screenshots/store-01-plan-overview@2x.jpg 720w" data-full="images/screenshots/store-01-plan-overview@2x.jpg"
+                                 sizes="(max-width: 620px) 64vw, 250px"
+                                 alt="Retirement planning. Nothing else. No bank logins, no transactions to sort, no budgets to track. The Plan Overview on iPhone." loading="lazy" width="360" height="782">
+                        </picture>
                     </button>
                 </li>
                 <li>
                     <button type="button" class="shot-button">
-                        <img src="images/screenshots/store-02-quick-plan-you.jpg" srcset="images/screenshots/store-02-quick-plan-you.jpg 360w, images/screenshots/store-02-quick-plan-you@2x.jpg 720w" data-full="images/screenshots/store-02-quick-plan-you@2x.jpg"
-                             sizes="(max-width: 620px) 64vw, 250px"
-                             alt="A plan in minutes. Seven quick steps, and your whole retirement is laid out. Three Quick Plan screens on iPhone." loading="lazy" width="360" height="782">
+                        <picture>
+                            <source type="image/avif" srcset="images/screenshots/store-02-quick-plan-you.avif 360w, images/screenshots/store-02-quick-plan-you@2x.avif 720w" sizes="(max-width: 620px) 64vw, 250px">
+                            <img src="images/screenshots/store-02-quick-plan-you.jpg" srcset="images/screenshots/store-02-quick-plan-you.jpg 360w, images/screenshots/store-02-quick-plan-you@2x.jpg 720w" data-full="images/screenshots/store-02-quick-plan-you@2x.jpg"
+                                 sizes="(max-width: 620px) 64vw, 250px"
+                                 alt="A plan in minutes. Seven quick steps, and your whole retirement is laid out. Three Quick Plan screens on iPhone." loading="lazy" width="360" height="782">
+                        </picture>
                     </button>
                 </li>
                 <li>
                     <button type="button" class="shot-button">
-                        <img src="images/screenshots/store-03-financial-insights.jpg" srcset="images/screenshots/store-03-financial-insights.jpg 360w, images/screenshots/store-03-financial-insights@2x.jpg 720w" data-full="images/screenshots/store-03-financial-insights@2x.jpg"
-                             sizes="(max-width: 620px) 64vw, 250px"
-                             alt="See what&rsquo;s worth doing. Recommendations for your plan, ranked by what each is worth in today&rsquo;s dollars. Financial Insights on iPhone." loading="lazy" width="360" height="782">
+                        <picture>
+                            <source type="image/avif" srcset="images/screenshots/store-03-financial-insights.avif 360w, images/screenshots/store-03-financial-insights@2x.avif 720w" sizes="(max-width: 620px) 64vw, 250px">
+                            <img src="images/screenshots/store-03-financial-insights.jpg" srcset="images/screenshots/store-03-financial-insights.jpg 360w, images/screenshots/store-03-financial-insights@2x.jpg 720w" data-full="images/screenshots/store-03-financial-insights@2x.jpg"
+                                 sizes="(max-width: 620px) 64vw, 250px"
+                                 alt="See what&rsquo;s worth doing. Recommendations for your plan, ranked by what each is worth in today&rsquo;s dollars. Financial Insights on iPhone." loading="lazy" width="360" height="782">
+                        </picture>
                     </button>
                 </li>
                 <li>
                     <button type="button" class="shot-button">
-                        <img src="images/screenshots/store-04-simulation-table.jpg" srcset="images/screenshots/store-04-simulation-table.jpg 360w, images/screenshots/store-04-simulation-table@2x.jpg 720w" data-full="images/screenshots/store-04-simulation-table@2x.jpg"
-                             sizes="(max-width: 620px) 64vw, 250px"
-                             alt="Every year, every dollar. Income, tax, savings and spending, and the reason behind each number. The year-by-year grid, with one year&rsquo;s OAS worked out." loading="lazy" width="360" height="782">
+                        <picture>
+                            <source type="image/avif" srcset="images/screenshots/store-04-simulation-table.avif 360w, images/screenshots/store-04-simulation-table@2x.avif 720w" sizes="(max-width: 620px) 64vw, 250px">
+                            <img src="images/screenshots/store-04-simulation-table.jpg" srcset="images/screenshots/store-04-simulation-table.jpg 360w, images/screenshots/store-04-simulation-table@2x.jpg 720w" data-full="images/screenshots/store-04-simulation-table@2x.jpg"
+                                 sizes="(max-width: 620px) 64vw, 250px"
+                                 alt="Every year, every dollar. Income, tax, savings and spending, and the reason behind each number. The year-by-year grid, with one year&rsquo;s OAS worked out." loading="lazy" width="360" height="782">
+                        </picture>
                     </button>
                 </li>
                 <li>
                     <button type="button" class="shot-button">
-                        <img src="images/screenshots/store-05-simulation-year-summary.jpg" srcset="images/screenshots/store-05-simulation-year-summary.jpg 360w, images/screenshots/store-05-simulation-year-summary@2x.jpg 720w" data-full="images/screenshots/store-05-simulation-year-summary@2x.jpg"
-                             sizes="(max-width: 620px) 64vw, 250px"
-                             alt="See any year in full. Where the money comes from, where it goes, and the tax. The Year Summary for one year." loading="lazy" width="360" height="782">
+                        <picture>
+                            <source type="image/avif" srcset="images/screenshots/store-05-simulation-year-summary.avif 360w, images/screenshots/store-05-simulation-year-summary@2x.avif 720w" sizes="(max-width: 620px) 64vw, 250px">
+                            <img src="images/screenshots/store-05-simulation-year-summary.jpg" srcset="images/screenshots/store-05-simulation-year-summary.jpg 360w, images/screenshots/store-05-simulation-year-summary@2x.jpg 720w" data-full="images/screenshots/store-05-simulation-year-summary@2x.jpg"
+                                 sizes="(max-width: 620px) 64vw, 250px"
+                                 alt="See any year in full. Where the money comes from, where it goes, and the tax. The Year Summary for one year." loading="lazy" width="360" height="782">
+                        </picture>
                     </button>
                 </li>
                 <li>
                     <button type="button" class="shot-button">
-                        <img src="images/screenshots/store-06-chart-investment-growth.jpg" srcset="images/screenshots/store-06-chart-investment-growth.jpg 360w, images/screenshots/store-06-chart-investment-growth@2x.jpg 720w" data-full="images/screenshots/store-06-chart-investment-growth@2x.jpg"
-                             sizes="(max-width: 620px) 64vw, 250px"
-                             alt="Eleven charts, one plan. Growth, tax, cash flow, OAS clawback, contribution room and more. The Investment Growth chart, with two more charts behind it." loading="lazy" width="360" height="782">
+                        <picture>
+                            <source type="image/avif" srcset="images/screenshots/store-06-chart-investment-growth.avif 360w, images/screenshots/store-06-chart-investment-growth@2x.avif 720w" sizes="(max-width: 620px) 64vw, 250px">
+                            <img src="images/screenshots/store-06-chart-investment-growth.jpg" srcset="images/screenshots/store-06-chart-investment-growth.jpg 360w, images/screenshots/store-06-chart-investment-growth@2x.jpg 720w" data-full="images/screenshots/store-06-chart-investment-growth@2x.jpg"
+                                 sizes="(max-width: 620px) 64vw, 250px"
+                                 alt="Eleven charts, one plan. Growth, tax, cash flow, OAS clawback, contribution room and more. The Investment Growth chart, with two more charts behind it." loading="lazy" width="360" height="782">
+                        </picture>
                     </button>
                 </li>
                 <li>
                     <button type="button" class="shot-button">
-                        <img src="images/screenshots/store-07-plan-overview-timeline.jpg" srcset="images/screenshots/store-07-plan-overview-timeline.jpg 360w, images/screenshots/store-07-plan-overview-timeline@2x.jpg 720w" data-full="images/screenshots/store-07-plan-overview-timeline@2x.jpg"
-                             sizes="(max-width: 620px) 64vw, 250px"
-                             alt="Built for Canadian retirement. CPP, OAS, GIS, TFSA, RRSP and RRIF, and what to do when. The Timeline, with the Steps tab behind it." loading="lazy" width="360" height="782">
+                        <picture>
+                            <source type="image/avif" srcset="images/screenshots/store-07-plan-overview-timeline.avif 360w, images/screenshots/store-07-plan-overview-timeline@2x.avif 720w" sizes="(max-width: 620px) 64vw, 250px">
+                            <img src="images/screenshots/store-07-plan-overview-timeline.jpg" srcset="images/screenshots/store-07-plan-overview-timeline.jpg 360w, images/screenshots/store-07-plan-overview-timeline@2x.jpg 720w" data-full="images/screenshots/store-07-plan-overview-timeline@2x.jpg"
+                                 sizes="(max-width: 620px) 64vw, 250px"
+                                 alt="Built for Canadian retirement. CPP, OAS, GIS, TFSA, RRSP and RRIF, and what to do when. The Timeline, with the Steps tab behind it." loading="lazy" width="360" height="782">
+                        </picture>
                     </button>
                 </li>
                 <li>
                     <button type="button" class="shot-button">
-                        <img src="images/screenshots/store-08-stress-test-monte-carlo.jpg" srcset="images/screenshots/store-08-stress-test-monte-carlo.jpg 360w, images/screenshots/store-08-stress-test-monte-carlo@2x.jpg 720w" data-full="images/screenshots/store-08-stress-test-monte-carlo@2x.jpg"
-                             sizes="(max-width: 620px) 64vw, 250px"
-                             alt="Put your plan to the test. Hundreds of simulated lifetimes, in good markets and bad. Stress test results." loading="lazy" width="360" height="782">
+                        <picture>
+                            <source type="image/avif" srcset="images/screenshots/store-08-stress-test-monte-carlo.avif 360w, images/screenshots/store-08-stress-test-monte-carlo@2x.avif 720w" sizes="(max-width: 620px) 64vw, 250px">
+                            <img src="images/screenshots/store-08-stress-test-monte-carlo.jpg" srcset="images/screenshots/store-08-stress-test-monte-carlo.jpg 360w, images/screenshots/store-08-stress-test-monte-carlo@2x.jpg 720w" data-full="images/screenshots/store-08-stress-test-monte-carlo@2x.jpg"
+                                 sizes="(max-width: 620px) 64vw, 250px"
+                                 alt="Put your plan to the test. Hundreds of simulated lifetimes, in good markets and bad. Stress test results." loading="lazy" width="360" height="782">
+                        </picture>
                     </button>
                 </li>
                 <li>
                     <button type="button" class="shot-button">
-                        <img src="images/screenshots/store-09-pdf-report.jpg" srcset="images/screenshots/store-09-pdf-report.jpg 360w, images/screenshots/store-09-pdf-report@2x.jpg 720w" data-full="images/screenshots/store-09-pdf-report@2x.jpg"
-                             sizes="(max-width: 620px) 64vw, 250px"
-                             alt="A full report to share. Your whole plan as a PDF, for you, your partner or your advisor. The PDF report." loading="lazy" width="360" height="782">
+                        <picture>
+                            <source type="image/avif" srcset="images/screenshots/store-09-pdf-report.avif 360w, images/screenshots/store-09-pdf-report@2x.avif 720w" sizes="(max-width: 620px) 64vw, 250px">
+                            <img src="images/screenshots/store-09-pdf-report.jpg" srcset="images/screenshots/store-09-pdf-report.jpg 360w, images/screenshots/store-09-pdf-report@2x.jpg 720w" data-full="images/screenshots/store-09-pdf-report@2x.jpg"
+                                 sizes="(max-width: 620px) 64vw, 250px"
+                                 alt="A full report to share. Your whole plan as a PDF, for you, your partner or your advisor. The PDF report." loading="lazy" width="360" height="782">
+                        </picture>
                     </button>
                 </li>
                 <li>
                     <button type="button" class="shot-button">
-                        <img src="images/screenshots/store-10-privacy.jpg" srcset="images/screenshots/store-10-privacy.jpg 360w, images/screenshots/store-10-privacy@2x.jpg 720w" data-full="images/screenshots/store-10-privacy@2x.jpg"
-                             sizes="(max-width: 620px) 64vw, 250px"
-                             alt="Private by design. Your plans stay on your devices and in your iCloud. The Privacy &amp; Security screen, beside five points: no account to create, no advertising, your data stays yours, works offline, export any time." loading="lazy" width="360" height="782">
+                        <picture>
+                            <source type="image/avif" srcset="images/screenshots/store-10-privacy.avif 360w, images/screenshots/store-10-privacy@2x.avif 720w" sizes="(max-width: 620px) 64vw, 250px">
+                            <img src="images/screenshots/store-10-privacy.jpg" srcset="images/screenshots/store-10-privacy.jpg 360w, images/screenshots/store-10-privacy@2x.jpg 720w" data-full="images/screenshots/store-10-privacy@2x.jpg"
+                                 sizes="(max-width: 620px) 64vw, 250px"
+                                 alt="Private by design. Your plans stay on your devices and in your iCloud. The Privacy &amp; Security screen, beside five points: no account to create, no advertising, your data stays yours, works offline, export any time." loading="lazy" width="360" height="782">
+                        </picture>
                     </button>
                 </li>
         </ul>
@@ -747,7 +831,8 @@
                         <span class="faq-icon" aria-hidden="true">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>It reads your plan and recommends specific changes — when to start CPP and OAS, an RRSP meltdown, whether to save in your RRSP or your TFSA, the withdrawal order that leaves you best off, paying a loan off sooner, turning on pension splitting — each with a dollar value in today&rsquo;s dollars, ranked by what matters most to you. It also answers three questions directly: when you can retire, how much more you can spend, and what return your plan needs. Every card explains its reasoning, and with an annual or lifetime subscription it applies in one tap.</p>
+                        <p>It reads your plan and recommends specific changes — when to start CPP and OAS, an RRSP meltdown, whether to save in your RRSP or your TFSA, the withdrawal order that leaves you best off, paying a loan off sooner, turning on pension splitting — each with a dollar value in today&rsquo;s dollars, ranked by what matters most to you.</p>
+                        <p>It also answers three questions directly: when you can retire, how much more you can spend, and what return your plan needs. Every card explains its reasoning, and with an annual or lifetime subscription it applies in one tap.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -756,7 +841,8 @@
                         <span class="faq-icon" aria-hidden="true">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>A few minutes. Quick Plan asks seven short screens of questions — your province and retirement age, your income and any workplace pension, your savings, your home and debts, your spending, and a spouse if you have one — and every answer has a sensible default. Your spending today and in retirement is enough to start; there are no transactions to import or categorize. Add detail whenever you like.</p>
+                        <p>A few minutes. Quick Plan asks seven short screens of questions — your province and retirement age, your income and any workplace pension, your savings, your home and debts, your spending, and a spouse if you have one — and every answer has a sensible default.</p>
+                        <p>Your spending today and in retirement is enough to start; there are no transactions to import or categorize. Add detail whenever you like.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -783,7 +869,8 @@
                         <span class="faq-icon" aria-hidden="true">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Your financial data is stored on your device and, with a subscription, syncs to your other Apple devices through the private database of your own iCloud account — your storage, under your Apple Account, which Apple doesn&rsquo;t let developers read. There are no Beaver FP servers and no accounts, so we never see your plan. The app sends usage analytics, which never include it. Syncing comes with every subscription — sync is then on by default when you&rsquo;re signed in to iCloud; turn it off and Beaver FP stays local to the device you&rsquo;re on.</p>
+                        <p>Your financial data is stored on your device and, with a subscription, syncs to your other Apple devices through the private database of your own iCloud account — your storage, under your Apple Account, which Apple doesn&rsquo;t let developers read. There are no Beaver FP servers and no accounts, so we never see your plan. The app sends usage analytics, which never include it.</p>
+                        <p>Syncing comes with every subscription — sync is then on by default when you&rsquo;re signed in to iCloud; turn it off and Beaver FP stays local to the device you&rsquo;re on.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -829,7 +916,10 @@
 <footer>
     <div class="footer-content">
         <div class="footer-section footer-brand">
-            <img src="images/brand/lockup-on-dark.png" alt="Beaver FP" class="footer-logo" width="140" height="34" loading="lazy">
+            <picture>
+                <source srcset="images/brand/lockup-on-dark.webp" type="image/webp">
+                <img src="images/brand/lockup-on-dark.png" alt="Beaver FP" class="footer-logo" width="140" height="34" loading="lazy">
+            </picture>
             <p>Canadian retirement planning, and nothing else. Designed with your privacy in mind.</p>
         </div>
         <div class="footer-section">
@@ -850,8 +940,10 @@
             </ul>
         </div>
         <div class="footer-section">
-            <h4>Contact</h4>
+            <h4>About</h4>
             <ul>
+                <li><a href="/about">About Beaver FP</a></li>
+                <li><a href="/contact">Contact</a></li>
                 <li><a href="mailto:support@beaverfp.com">support@beaverfp.com</a></li>
             </ul>
         </div>

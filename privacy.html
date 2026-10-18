@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for Beaver FP - Your financial data lives on your device and can sync through your own iCloud account. No Beaver FP servers, no accounts, no advertising.">
+    <meta name="description" content="How Beaver FP handles your data: your plan stays on your devices and in your own iCloud, there are no accounts, and what the usage analytics contain.">
     <title>Privacy Policy - Beaver FP</title>
     <meta name="theme-color" content="#0D4234" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0b1512" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="canonical" href="https://beaverfp.com/privacy">
-    <link rel="stylesheet" href="style.css?v=2.5">
+    <link rel="stylesheet" href="style.css?v=2.5.1">
     <!-- HeyCatch analytics. Pinned to the version on npm's `latest` dist-tag
          (never a -dev/-beta prerelease). requestBatching is off because every
          navigation here is a full page load, which would drop a pending batch. -->
@@ -22,13 +22,34 @@
             requestBatching: false,
         });
     </script>
+    <!-- Organization: the same block as index.html; keep them in step. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://beaverfp.com/#organization",
+      "name": "Beaver FP",
+      "url": "https://beaverfp.com/",
+      "logo": "https://beaverfp.com/images/brand/icon-1024.png",
+      "email": "support@beaverfp.com",
+      "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "support@beaverfp.com", "url": "https://beaverfp.com/contact" },
+      "founder": { "@type": "Person", "name": "Rob Armstrong" },
+      "address": { "@type": "PostalAddress", "addressLocality": "St. Albert", "addressRegion": "AB", "addressCountry": "CA" },
+      "sameAs": [
+        "https://apps.apple.com/ca/app/beaver-fp/id6751347553",
+        "https://apps.apple.com/ca/developer/robert-armstrong/id1834728992"
+      ]
+    }
+    </script>
 </head>
 <body>
     <header>
         <div class="header-content">
             <a href="/" class="logo" aria-label="Beaver FP home">
                 <picture>
+                    <source srcset="images/brand/lockup-on-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
                     <source srcset="images/brand/lockup-on-dark.png" media="(prefers-color-scheme: dark)">
+                    <source srcset="images/brand/lockup-on-light.webp" type="image/webp">
                     <img src="images/brand/lockup-on-light.png" alt="Beaver FP" class="logo-image" width="160" height="40">
                 </picture>
             </a>
@@ -179,7 +200,10 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section footer-brand">
-                <img src="images/brand/lockup-on-dark.png" alt="Beaver FP" class="footer-logo">
+                <picture>
+                    <source srcset="images/brand/lockup-on-dark.webp" type="image/webp">
+                    <img src="images/brand/lockup-on-dark.png" alt="Beaver FP" class="footer-logo">
+                </picture>
                 <p>Canadian retirement planning, and nothing else. Designed with your privacy in mind.</p>
             </div>
             <div class="footer-section">
@@ -190,8 +214,10 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
+                <h4>About</h4>
                 <ul>
+                    <li><a href="/about">About Beaver FP</a></li>
+                    <li><a href="/contact">Contact</a></li>
                     <li>Email: <a href="mailto:support@beaverfp.com">support@beaverfp.com</a></li>
                 </ul>
             </div>
