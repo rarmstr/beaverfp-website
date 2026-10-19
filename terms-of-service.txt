@@ -73,7 +73,7 @@ Beaver FP offers subscription-based access through Apple's In-App Purchase syste
 
 Subscription Plans:
 
-- Monthly Subscription: Billed monthly with a 14-day free trial for new users
+- Monthly Subscription: Billed monthly with a one-week free trial for new users
 - Annual Subscription: Billed annually at a discounted rate
 - Lifetime Purchase: One-time payment for perpetual access
 
@@ -86,7 +86,7 @@ Payment Processing:
 
 Free Trial:
 
-- New users may be eligible for a 14-day free trial
+- New users may be eligible for a one-week free trial
 - You can cancel anytime during the trial period without charge
 - If you don't cancel before the trial ends, you'll be charged for the subscription
 

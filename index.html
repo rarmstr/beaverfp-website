@@ -13,7 +13,7 @@
     <!-- Bump ?v= on style.css and script.js (here, and style.css in every other
          page) with each release. Pages caches them for 4 hours but the HTML for
          10 minutes, so without it returning visitors get new HTML with old CSS. -->
-    <link rel="stylesheet" href="style.css?v=2.5.1">
+    <link rel="stylesheet" href="style.css?v=2.5.2">
     <!-- HeyCatch analytics. Pinned to the version on npm's `latest` dist-tag
          (never a -dev/-beta prerelease). requestBatching is off because every
          navigation here is a full page load, which would drop a pending batch. -->
@@ -85,7 +85,10 @@
       "address": { "@type": "PostalAddress", "addressLocality": "St. Albert", "addressRegion": "AB", "addressCountry": "CA" },
       "sameAs": [
         "https://apps.apple.com/ca/app/beaver-fp/id6751347553",
-        "https://apps.apple.com/ca/developer/robert-armstrong/id1834728992"
+        "https://apps.apple.com/ca/developer/robert-armstrong/id1834728992",
+        "https://www.linkedin.com/company/143116053",
+        "https://x.com/beaverfpcom",
+        "https://www.threads.com/@beaver.fp"
       ]
     }
     </script>
@@ -107,7 +110,7 @@
         {
           "@type": "Question",
           "name": "Is Beaver FP free?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Quick Plan is free: build up to two plans and see the year-by-year projection, all eleven charts, and what Financial Insights found and what each opportunity is worth. A monthly subscription, with a one-week free trial, lets you edit every detail and adds PDF reports and iCloud sync between your devices. An annual or lifetime subscription adds applying an opportunity in one tap, stress testing and more plans. Current pricing is shown on the App Store." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Quick Plan is free: build up to two plans and see the year-by-year projection, all eleven charts, and what Financial Insights found and what each opportunity is worth. A monthly subscription, with a one-week free trial, lets you edit every detail and adds PDF reports and iCloud sync between your devices. An annual or lifetime subscription adds applying an opportunity in one tap, stress testing and more plans. Current pricing is shown on the App Store. Cancel the trial before the week is up and you pay nothing." }
         },
         {
           "@type": "Question",
@@ -818,6 +821,67 @@
         </div>
     </section>
 
+    <!-- ============================ FOUNDER ============================ -->
+    <!-- Rob's own words, from the app's About screen (AboutMeView.swift) and
+         about.html; the portrait is the About page's. -->
+    <section class="founder-section" id="founder">
+        <div class="container">
+            <div class="about-person founder">
+                <figure class="about-portrait">
+                    <picture>
+                        <source type="image/avif" srcset="images/rob-armstrong.avif 140w, images/rob-armstrong@2x.avif 280w" sizes="140px">
+                        <img src="images/rob-armstrong.jpg"
+                             srcset="images/rob-armstrong.jpg 140w, images/rob-armstrong@2x.jpg 280w"
+                             sizes="140px" alt="Rob Armstrong" width="140" height="200" loading="lazy">
+                    </picture>
+                </figure>
+                <div class="about-person-text">
+                    <h2>Built by a Canadian, for Canadians</h2>
+                    <p>I&rsquo;m Rob Armstrong, an independent developer in St. Albert, Alberta. I&rsquo;ve been building Beaver FP since 2024, after years of helping friends and colleagues with their retirement planning.</p>
+                    <p>Every feature in it started as a user suggestion or a personal need I discovered while planning my own retirement. There&rsquo;s no Beaver FP server, so I never see your plan. Questions and suggestions reach me at <a href="mailto:support@beaverfp.com">support@beaverfp.com</a>.</p>
+                    <p>Follow Beaver FP on <a href="https://www.linkedin.com/company/143116053" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://x.com/beaverfpcom" target="_blank" rel="noopener">X</a> and <a href="https://www.threads.com/@beaver.fp" target="_blank" rel="noopener">Threads</a>.</p>
+                    <a href="/about" class="text-link">More about Beaver FP →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ APP STORE ============================ -->
+    <!-- From the Canadian App Store listing. Recheck the rating, the count and
+         the version every release. Quotes are verbatim, except the space
+         restored in Bakin092's "complex enough". -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-head">
+                <h2>What people say on the App Store</h2>
+                <p class="section-lede">4.0 out of 5 from 4 ratings on the Canadian App Store, as of October 2026, where version&nbsp;2.6 came out on October&nbsp;18. Three of the reviews, in the reviewers&rsquo; own words:</p>
+            </div>
+            <ul class="review-grid">
+                <li class="review-card">
+                    <p class="review-stars"><span aria-hidden="true">★★★★★</span><span class="visually-hidden">5 out of 5 stars</span></p>
+                    <p class="review-title">Planning tool for retirement</p>
+                    <blockquote><p>&ldquo;Great tool… simple to easily get the basics but complex enough to get into the weeds with lots of scenarios. Worth it!&rdquo;</p></blockquote>
+                    <p class="review-by">Bakin092, June 2026</p>
+                </li>
+                <li class="review-card">
+                    <p class="review-stars"><span aria-hidden="true">★★★★★</span><span class="visually-hidden">5 out of 5 stars</span></p>
+                    <p class="review-title">Easy to use and not expensive</p>
+                    <blockquote><p>&ldquo;I found the tool easy to use but you can drill down into the details if you want. It was pretty reasonably priced for such a big tool&rdquo;</p></blockquote>
+                    <p class="review-by">YhuriHerr2026, July 2026</p>
+                </li>
+                <li class="review-card">
+                    <p class="review-stars"><span aria-hidden="true">★★★★★</span><span class="visually-hidden">5 out of 5 stars</span></p>
+                    <p class="review-title">Nicely done; I will be getting lots of use out of it.</p>
+                    <blockquote><p>&ldquo;I&rsquo;ve been using it a few weeks and quite happy with the clarity it provides, and the ease with which I can modify assumptions and potential future choices and get nice visual results to the impacts of my choices.&rdquo;</p></blockquote>
+                    <p class="review-by">Bearfud, September 2026</p>
+                </li>
+            </ul>
+            <p class="reviews-more">
+                <a href="https://apps.apple.com/ca/app/beaver-fp/id6751347553?see-all=reviews" class="text-link" target="_blank" rel="noopener">Read every review on the App Store →</a>
+            </p>
+        </div>
+    </section>
+
     <!-- ============================ FAQ ============================ -->
     <section class="faq-section" id="faq">
         <div class="container">
@@ -851,7 +915,7 @@
                         <span class="faq-icon" aria-hidden="true">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Quick Plan is free: build up to two plans and see the year-by-year projection, all eleven charts, and what Financial Insights found and what each opportunity is worth. A monthly subscription, with a one-week free trial, lets you edit every detail and adds PDF reports and iCloud sync between your devices. An annual or lifetime subscription adds applying an opportunity in one tap, stress testing and more plans. Current pricing is on the App Store listing.</p>
+                        <p>Quick Plan is free: build up to two plans and see the year-by-year projection, all eleven charts, and what Financial Insights found and what each opportunity is worth. A monthly subscription, with a one-week free trial, lets you edit every detail and adds PDF reports and iCloud sync between your devices. An annual or lifetime subscription adds applying an opportunity in one tap, stress testing and more plans. Current pricing is on the App Store listing. Cancel the trial before the week is up and you pay nothing.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -900,7 +964,7 @@
         <div class="container">
             <div class="cta-inner">
                 <h2>Start with what you already know</h2>
-                <p>Quick Plan is free and lays out your retirement in minutes. When you want to fine-tune every detail, the monthly subscription starts with a one-week free trial.</p>
+                <p>Quick Plan is free and lays out your retirement in minutes. When you want to fine-tune every detail, the monthly subscription starts with a one-week free trial. Cancel before the week is up and you pay nothing.</p>
                 <a href="https://apps.apple.com/ca/app/beaver-fp/id6751347553" class="app-store-button" target="_blank" rel="noopener">
                     <img src="images/app-store-badge.svg" alt="Download Beaver FP on the App Store" class="app-store-badge" width="180" height="54" loading="lazy">
                 </a>
@@ -921,6 +985,13 @@
                 <img src="images/brand/lockup-on-dark.png" alt="Beaver FP" class="footer-logo" width="140" height="34" loading="lazy">
             </picture>
             <p>Canadian retirement planning, and nothing else. Designed with your privacy in mind.</p>
+            <a href="/about" class="footer-maker">
+                <picture>
+                    <source type="image/avif" srcset="images/rob-armstrong.avif">
+                    <img src="images/rob-armstrong.jpg" alt="" width="40" height="40" loading="lazy">
+                </picture>
+                <span>Made in St. Albert, Alberta, by Rob Armstrong</span>
+            </a>
         </div>
         <div class="footer-section">
             <h4>Product</h4>
@@ -945,6 +1016,9 @@
                 <li><a href="/about">About Beaver FP</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="mailto:support@beaverfp.com">support@beaverfp.com</a></li>
+                <li><a href="https://www.linkedin.com/company/143116053" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://x.com/beaverfpcom" target="_blank" rel="noopener">X</a></li>
+                <li><a href="https://www.threads.com/@beaver.fp" target="_blank" rel="noopener">Threads</a></li>
             </ul>
         </div>
     </div>
