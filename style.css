@@ -700,6 +700,22 @@ nav a:hover { color: var(--accent); }
 
 /* ---------- App Store reviews ---------- */
 .reviews-section { padding: var(--section-y) 0; background: var(--bg-alt); }
+.review-facts {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2.5rem;
+  margin-top: 1.5rem;
+}
+.review-facts li { display: flex; flex-direction: column; align-items: center; white-space: nowrap; font-size: 0.92rem; color: var(--text-muted); }
+.review-facts strong {
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--heading);
+}
 .review-grid {
   list-style: none;
   display: grid;
